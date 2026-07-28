@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-labelledby="title desc">
+  <title id="title">Test-time robot learning research map</title>
+  <desc id="desc">A post-trained robot policy branches into five test-time learning mechanisms and three capability outcomes.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#64748b"/>
+    </marker>
+    <style>
+      .label { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #172033; text-anchor: middle; }
+      .primary { font-size: 19px; font-weight: 700; }
+      .secondary { font-size: 16px; font-weight: 500; fill: #334155; }
+      .outcome { font-size: 17px; font-weight: 700; }
+      .card-title { font-size: 17px; }
+      .inverse { fill: #ffffff; }
+      .arrow { fill: none; stroke: #64748b; stroke-width: 2; marker-end: url(#arrow); }
+      .branch { fill: none; stroke: #94a3b8; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect x="1" y="1" width="1198" height="328" rx="8" fill="#ffffff" stroke="#d8dee9" stroke-width="2"/>
+
+  <rect x="30" y="18" width="330" height="58" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+  <text class="label primary" x="195" y="43">Post-trained robot policy</text>
+  <text class="label secondary" x="195" y="64">in a deployment environment</text>
+
+  <path class="arrow" d="M360 47 H440"/>
+  <rect x="450" y="18" width="300" height="58" rx="8" fill="#172033"/>
+  <text class="label primary inverse" x="600" y="54">What changes at test time?</text>
+
+  <path class="branch" d="M600 76 V94 H132 V102"/>
+  <path class="branch" d="M600 94 H366 V102"/>
+  <path class="branch" d="M600 94 V102"/>
+  <path class="branch" d="M600 94 H834 V102"/>
+  <path class="branch" d="M600 94 H1068 V102"/>
+  <path d="M128 98 L132 106 L136 98 Z" fill="#94a3b8"/>
+  <path d="M362 98 L366 106 L370 98 Z" fill="#94a3b8"/>
+  <path d="M596 98 L600 106 L604 98 Z" fill="#94a3b8"/>
+  <path d="M830 98 L834 106 L838 98 Z" fill="#94a3b8"/>
+  <path d="M1064 98 L1068 106 L1072 98 Z" fill="#94a3b8"/>
+
+  <rect x="24" y="110" width="216" height="120" rx="8" fill="#ecfeff" stroke="#0f766e" stroke-width="2"/>
+  <text class="label primary" x="132" y="146">Input context</text>
+  <text class="label secondary" x="132" y="184">In-context learning</text>
+  <text class="label secondary" x="132" y="207">and prompting</text>
+
+  <rect x="258" y="110" width="216" height="120" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text class="label primary card-title" x="366" y="138">Sampling or action</text>
+  <text class="label primary card-title" x="366" y="160">choice</text>
+  <text class="label secondary" x="366" y="190">Test-time policy</text>
+  <text class="label secondary" x="366" y="212">steering</text>
+
+  <rect x="492" y="110" width="216" height="120" rx="8" fill="#fffbeb" stroke="#b45309" stroke-width="2"/>
+  <text class="label primary card-title" x="600" y="138">Candidate set</text>
+  <text class="label primary card-title" x="600" y="160">and scoring</text>
+  <text class="label secondary" x="600" y="201">Scaling verification</text>
+
+  <rect x="726" y="110" width="216" height="120" rx="8" fill="#f0fdf4" stroke="#15803d" stroke-width="2"/>
+  <text class="label primary card-title" x="834" y="138">Fast state or</text>
+  <text class="label primary card-title" x="834" y="160">representation</text>
+  <text class="label secondary" x="834" y="201">Test-time training</text>
+
+  <rect x="960" y="110" width="216" height="120" rx="8" fill="#fff1f2" stroke="#be123c" stroke-width="2"/>
+  <text class="label primary card-title" x="1068" y="138">Policy or adapter</text>
+  <text class="label primary card-title" x="1068" y="160">parameters</text>
+  <text class="label secondary" x="1068" y="190">RL post-training</text>
+  <text class="label secondary" x="1068" y="212">and adaptation</text>
+
+  <path class="arrow" d="M132 230 V256"/>
+  <path class="arrow" d="M366 230 V256"/>
+  <path class="arrow" d="M600 230 V256"/>
+  <path class="arrow" d="M834 230 V256"/>
+  <path class="arrow" d="M1068 230 V256"/>
+
+  <rect x="24" y="264" width="684" height="48" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+  <text class="label outcome" x="366" y="294">Primarily mode selection</text>
+
+  <rect x="726" y="264" width="216" height="48" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+  <text class="label outcome" x="834" y="284" font-size="15">Stateful behavioral</text>
+  <text class="label outcome" x="834" y="303" font-size="15">adaptation</text>
+
+  <rect x="960" y="264" width="216" height="48" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+  <text class="label outcome" x="1068" y="284" font-size="15">Action-distribution</text>
+  <text class="label outcome" x="1068" y="303" font-size="15">shaping</text>
+</svg>

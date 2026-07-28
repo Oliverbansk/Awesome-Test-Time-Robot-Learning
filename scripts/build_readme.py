@@ -12,10 +12,15 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "papers.json"
 README_PATH = ROOT / "README.md"
-STATS_START = "<!-- GENERATED_STATS_START -->"
-STATS_END = "<!-- GENERATED_STATS_END -->"
 LISTS_START = "<!-- GENERATED_PAPER_LISTS_START -->"
 LISTS_END = "<!-- GENERATED_PAPER_LISTS_END -->"
+LINE_EMOJIS = {
+    "rl-post-training-and-adaptation": "🧪",
+    "test-time-policy-steering": "🧭",
+    "test-time-training": "🧠",
+    "in-context-learning-and-prompting": "🎬",
+    "scaling-verification": "✅",
+}
 
 
 def load_data() -> dict:
@@ -48,8 +53,10 @@ def render_paper_lists(data: dict) -> str:
     sections = []
     for index, line in enumerate(data["lines"], start=1):
         papers = line["papers"]
+        section_id = f"{index}-{line['id']}"
         rows = [
-            f"## {index}. {line['title']}",
+            f'<a id="{section_id}"></a>',
+            f"## {index}. {LINE_EMOJIS[line['id']]} {line['title']}",
             "",
             line["description"],
             "",
@@ -81,20 +88,9 @@ def render_paper_lists(data: dict) -> str:
     return "\n\n".join(sections)
 
 
-def render_stats(data: dict) -> str:
-    count = sum(len(line["papers"]) for line in data["lines"])
-    return (
-        f"**{count} papers across {len(data['lines'])} lines of work.** "
-        f"Last updated: `{data['last_updated']}`."
-    )
-
-
 def build_readme(data: dict, current: str) -> str:
-    rendered = replace_block(
-        current, STATS_START, STATS_END, render_stats(data)
-    )
     return replace_block(
-        rendered, LISTS_START, LISTS_END, render_paper_lists(data)
+        current, LISTS_START, LISTS_END, render_paper_lists(data)
     )
 
 

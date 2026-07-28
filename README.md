@@ -1,50 +1,26 @@
-# Awesome Test-Time Robot Learning
+# 🤖 Awesome Test-Time Robot Learning
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A curated research map of how robot policies improve after pre-training and task-level post-training, using context, test-time computation, deployment experience, or online interaction.
 
-<!-- GENERATED_STATS_START -->
-**32 papers across 5 lines of work.** Last updated: `2026-07-28`.
-<!-- GENERATED_STATS_END -->
-
-## Scope
+## 🎯 Scope
 
 We use **test-time robot learning** as a broad deployment-stage umbrella: a post-trained robot policy encounters a concrete environment and improves within an inference call, an episode, or a sequence of online interactions. The list is centered on manipulation, while including general robot-learning methods when their test-time mechanism transfers directly.
 
-A paper belongs here when it improves a deployed robot policy by changing at least one of the following:
+A paper belongs here when it changes deployment context; action sampling, guidance, or selection; candidate generation and verification; a fast state, memory, or representation; or policy-side parameters using deployment data. Routine pre-training, ordinary task fine-tuning with a fixed offline dataset, and planning without a learned robot policy are outside the main scope.
 
-- the context supplied to the policy;
-- action sampling, guidance, or selection;
-- the number and diversity of candidates and how they are verified;
-- a fast state, memory, or representation updated during deployment;
-- policy, adapter, residual, or latent-interface parameters using deployment data.
-
-Routine pre-training, ordinary task fine-tuning with a fixed offline dataset, and planning methods without a learned robot policy are outside the main scope.
-
-## Research Map
+## 🗺️ Research Map
 
 The taxonomy is mechanism-first: **what changes when the robot is already being deployed?**
 
-```mermaid
-flowchart TB
-    P["Post-trained robot policy<br/>in a deployment environment"] --> Q{"What changes at test time?"}
-
-    Q --> C["Input context<br/>In-context learning and prompting"]
-    Q --> S["Sampling or action choice<br/>Test-time policy steering"]
-    Q --> V["Candidate set and scoring<br/>Scaling verification"]
-    Q --> T["Fast state or representation<br/>Test-time training"]
-    Q --> R["Policy or adapter parameters<br/>RL post-training and adaptation"]
-
-    C --> M["Primarily mode selection"]
-    S --> M
-    V --> M
-    T --> A["Stateful behavioral adaptation"]
-    R --> D["Action-distribution shaping"]
-```
+![Research map of the five test-time robot learning lines](assets/research-map.svg)
 
 This is not a claim that every paper fits only one box. Hybrid methods are expected. Each paper is assigned to the line that best describes its **main deployment-time update mechanism**.
+
+<details>
+<summary><strong>Compare the five lines</strong></summary>
 
 | Line | What changes | Typical supervision | Main capability | Main bottleneck |
 | --- | --- | --- | --- | --- |
@@ -59,19 +35,22 @@ Two distinctions are especially useful:
 - **Mode selection:** finding a behavior that already exists in the base policy's support.
 - **Distribution shaping:** changing the learned behavior because the required action mode is absent, unreliable, or poorly associated with the current observation.
 
-## Contents
+</details>
 
-- [RL Post-Training and Adaptation](#1-rl-post-training-and-adaptation)
-- [Test-Time Policy Steering](#2-test-time-policy-steering)
-- [Test-Time Training](#3-test-time-training)
-- [In-Context Learning and Prompting](#4-in-context-learning-and-prompting)
-- [Scaling Verification](#5-scaling-verification)
-- [Contributing](#contributing)
+## 📚 Contents
+
+- [🧪 RL Post-Training and Adaptation](#1-rl-post-training-and-adaptation)
+- [🧭 Test-Time Policy Steering](#2-test-time-policy-steering)
+- [🧠 Test-Time Training](#3-test-time-training)
+- [🎬 In-Context Learning and Prompting](#4-in-context-learning-and-prompting)
+- [✅ Scaling Verification](#5-scaling-verification)
+- [🤝 Contributing](#contributing)
 
 Papers are sorted by their first public release date, from oldest to newest. Venue denotes the latest known publication venue; otherwise it is listed as `arXiv`.
 
 <!-- GENERATED_PAPER_LISTS_START -->
-## 1. RL Post-Training and Adaptation
+<a id="1-rl-post-training-and-adaptation"></a>
+## 1. 🧪 RL Post-Training and Adaptation
 
 These methods use reward-bearing deployment interaction to update a policy, adapter, residual controller, or latent interface. They are the clearest route from choosing an existing behavior to reshaping a weak or missing action distribution.
 
@@ -100,7 +79,8 @@ These methods use reward-bearing deployment interaction to update a policy, adap
 | 2026-06-30 | [Adapting Generalist Robot Policies with Semantic Reinforcement Learning](https://arxiv.org/abs/2606.31958) | `arXiv` | - | VLA, Semantic Actions, Real-World RL, Online Adaptation |
 | 2026-07-09 | [FlowDAgger: Human-in-the-Loop Adaptation of Generative Robot Policies in Latent Space](https://arxiv.org/abs/2607.08877) | `arXiv` | - | Human-in-the-Loop, DAgger, Generative Policy, Action Inversion |
 
-## 2. Test-Time Policy Steering
+<a id="2-test-time-policy-steering"></a>
+## 2. 🧭 Test-Time Policy Steering
 
 These methods keep the base policy frozen and intervene in its action-generation process by re-ranking candidates, guiding denoising or flow trajectories, optimizing noise, or applying external value and constraint signals.
 
@@ -123,7 +103,8 @@ These methods keep the base policy frozen and intervene in its action-generation
 | 2026-05-12 | [Retrieve-then-Steer](https://arxiv.org/abs/2605.10094) | `arXiv` | - | Retrieval, Test-Time Memory, Frozen Policy, Flow Policy |
 | 2026-06-12 | [Improving Robotic Generalist Policies via Flow Reversal Steering](https://arxiv.org/abs/2606.13675) | `arXiv` | - | Flow Matching, Flow Inversion, VLM Guidance, Noise-Space Policy |
 
-## 3. Test-Time Training
+<a id="3-test-time-training"></a>
+## 3. 🧠 Test-Time Training
 
 Test-time training updates a fast state, memory, representation, or a restricted set of weights from the robot's recent unlabeled experience. The learned update rule is usually prepared before deployment and executed online.
 
@@ -141,7 +122,8 @@ Test-time training updates a fast state, memory, representation, or a restricted
 | 2026-07-08 | [WAM-TTT: Steering World-Action Models by Watching Human Play at Test Time](https://arxiv.org/abs/2607.06988) | `arXiv` | - | World-Action Model, Human Video, Fast Weights, Test-Time Training |
 | 2026-07-16 | [RoboTTT: Context Scaling for Robot Policies](https://arxiv.org/abs/2607.15275) | `arXiv` | - | Long Context, Fast Weights, VLA, Human Video |
 
-## 4. In-Context Learning and Prompting
+<a id="4-in-context-learning-and-prompting"></a>
+## 4. 🎬 In-Context Learning and Prompting
 
 These methods condition robot behavior on demonstrations, videos, language, or sensorimotor examples placed directly in the policy context. Adaptation happens through inference in a policy explicitly trained to interpret such prompts.
 
@@ -162,7 +144,8 @@ These methods condition robot behavior on demonstrations, videos, language, or s
 | 2026-06-02 | [Instant-Fold: In-Context Imitation Learning for Deformable Object Manipulation](https://arxiv.org/abs/2606.04269) | `arXiv` | - | Deformable Manipulation, Human Demonstration, Flow Matching, 3D Tokens |
 | 2026-06-29 | [Behavior Prompting Policy: Demonstrations as Prompts for Manipulation](https://arxiv.org/abs/2606.30457) | `arXiv` | [Project](https://behavior-prompting.github.io/) | Sensorimotor Prompt, Robot Demonstration, Behavior Prompting |
 
-## 5. Scaling Verification
+<a id="5-scaling-verification"></a>
+## 5. ✅ Scaling Verification
 
 Verification methods spend additional test-time compute to diversify instructions or action candidates and then select among them with a learned or model-based verifier. They separate generating candidate behavior from judging whether it matches the task.
 
@@ -179,7 +162,8 @@ Verification methods spend additional test-time compute to diversify instruction
 | 2026-02-12 | [Scaling Verification Can Be More Effective than Scaling Policy Learning for Vision-Language-Action Alignment](https://arxiv.org/abs/2602.12281) | `arXiv` | - | Test-Time Scaling, Action Verification, VLA Alignment, Best-of-N |
 <!-- GENERATED_PAPER_LISTS_END -->
 
-## Contributing
+<a id="contributing"></a>
+## 🤝 Contributing
 
 Paper additions and corrections are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md), edit `data/papers.json`, and run:
 
@@ -190,10 +174,10 @@ python3 scripts/build_readme.py --check
 
 You can also use the **Add a paper** issue template.
 
-## Acknowledgements
+## 🙏 Acknowledgements
 
 The repository structure draws inspiration from community-maintained collections such as [Awesome World Models for Robotics](https://github.com/leofan90/Awesome-World-Models), [Awesome VLA Post-Training](https://github.com/AoqunJin/Awesome-VLA-Post-Training), and [Awesome VLA](https://github.com/KwanWaiPang/Awesome-VLA).
 
-## License
+## 📄 License
 
 This repository is released under the [MIT License](LICENSE).
