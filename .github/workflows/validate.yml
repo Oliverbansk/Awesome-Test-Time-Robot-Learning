@@ -1,0 +1,23 @@
+name: Validate paper index
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate paper metadata
+        run: python3 scripts/validate_data.py
+      - name: Check generated README
+        run: python3 scripts/build_readme.py --check

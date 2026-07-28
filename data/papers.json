@@ -1,0 +1,439 @@
+{
+  "schema_version": 1,
+  "last_updated": "2026-07-28",
+  "lines": [
+    {
+      "id": "rl-post-training-and-adaptation",
+      "title": "RL Post-Training and Adaptation",
+      "description": "These methods use reward-bearing deployment interaction to update a policy, adapter, residual controller, or latent interface. They are the clearest route from choosing an existing behavior to reshaping a weak or missing action distribution.",
+      "changes": "Policy-side parameters, including full or partial policy weights, residual modules, low-rank adapters, and learned latent interfaces.",
+      "strength": "It can improve state-action associations and learn behavior that the frozen base policy does not reliably produce.",
+      "limitation": "Real-world interaction is expensive and introduces reset, exploration, safety, reward-design, and continual-consolidation problems.",
+      "papers": [
+        {
+          "date": "2024-07-23",
+          "title": "From Imitation to Refinement: Residual RL for Precise Assembly",
+          "venue": "ICRA 2025",
+          "paper": "https://arxiv.org/abs/2407.16677",
+          "project": "https://residual-assembly.github.io/",
+          "tags": [
+            "Residual RL",
+            "Assembly",
+            "PPO",
+            "Sim-to-Real"
+          ]
+        },
+        {
+          "date": "2024-09-01",
+          "title": "Diffusion Policy Policy Optimization (DPPO)",
+          "venue": "ICLR 2025",
+          "paper": "https://arxiv.org/abs/2409.00588",
+          "tags": [
+            "Diffusion Policy",
+            "On-Policy RL",
+            "PPO"
+          ]
+        },
+        {
+          "date": "2024-12-18",
+          "title": "Policy Decorator: Model-Agnostic Online Refinement for Large Policy Model",
+          "venue": "ICLR 2025",
+          "paper": "https://arxiv.org/abs/2412.13630",
+          "project": "https://policydecorator.github.io/",
+          "tags": [
+            "Residual RL",
+            "Online Adaptation",
+            "SAC",
+            "Model-Agnostic"
+          ]
+        },
+        {
+          "date": "2025-05-24",
+          "title": "VLA-RL: Towards Masterful and General Robotic Manipulation with Scalable Reinforcement Learning",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2505.18719",
+          "tags": [
+            "VLA",
+            "Online RL",
+            "PPO",
+            "Process Reward"
+          ]
+        },
+        {
+          "date": "2025-08-20",
+          "title": "HIL-SERL: Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning",
+          "venue": "Science Robotics",
+          "paper": "https://doi.org/10.1126/scirobotics.ads5033",
+          "tags": [
+            "Human-in-the-Loop RL",
+            "Real-World RL",
+            "Human Intervention"
+          ]
+        },
+        {
+          "date": "2025-09-18",
+          "title": "Unified Latent Steering and Residual Refinement for Online Improvement of Diffusion Policy Models",
+          "venue": "ICML 2026 Workshop / CoRL 2026 Submission",
+          "paper": "https://openreview.net/forum?id=9sQVoVMeSD",
+          "tags": [
+            "Diffusion Policy",
+            "Latent Steering",
+            "Residual RL",
+            "Online RL"
+          ]
+        },
+        {
+          "date": "2025-09-23",
+          "title": "Residual Off-Policy RL for Finetuning Behavior Cloning Policies",
+          "venue": "ICLR 2026 Workshop",
+          "paper": "https://arxiv.org/abs/2509.19301",
+          "tags": [
+            "Residual RL",
+            "Off-Policy RL",
+            "Behavior Cloning"
+          ]
+        },
+        {
+          "date": "2025-10-16",
+          "title": "RL-100: Performant Robotic Manipulation with Real-World Reinforcement Learning",
+          "venue": "Science Robotics",
+          "paper": "https://arxiv.org/abs/2510.14830",
+          "project": "https://lei-kun.github.io/RL-100/",
+          "tags": [
+            "Real-World RL",
+            "Offline-to-Online RL",
+            "Diffusion Policy"
+          ]
+        },
+        {
+          "date": "2026-01-11",
+          "title": "On-the-Fly VLA Adaptation via Test-Time Reinforcement Learning",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2601.06748",
+          "tags": [
+            "VLA",
+            "Test-Time RL",
+            "LoRA",
+            "Online Adaptation"
+          ]
+        },
+        {
+          "date": "2026-02-13",
+          "title": "Beyond Imitation: Reinforcement Learning-Based Sim-Real Co-Training for VLA Models",
+          "venue": "ICRA 2026 Workshop",
+          "paper": "https://arxiv.org/abs/2602.12628",
+          "tags": [
+            "VLA",
+            "Sim-to-Real",
+            "Co-Training",
+            "RL Fine-Tuning"
+          ]
+        },
+        {
+          "date": "2026-05-12",
+          "title": "TMRL: Diffusion Timestep-Modulated Pretraining Enables Exploration for Efficient Policy Finetuning",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2605.12236",
+          "tags": [
+            "Diffusion Policy",
+            "Exploration",
+            "RL Fine-Tuning",
+            "Action Coverage"
+          ]
+        },
+        {
+          "date": "2026-05-19",
+          "title": "Beyond Action Residuals: Real-World Robot Policy Steering via Bottleneck Latent Reinforcement Learning",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2605.19919",
+          "project": "https://manutdmoon.github.io/ZPRL/",
+          "tags": [
+            "Latent-Space RL",
+            "Flow Matching",
+            "Real-World RL",
+            "Policy Adaptation"
+          ]
+        },
+        {
+          "date": "2026-06-30",
+          "title": "Adapting Generalist Robot Policies with Semantic Reinforcement Learning",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2606.31958",
+          "tags": [
+            "VLA",
+            "Semantic Actions",
+            "Real-World RL",
+            "Online Adaptation"
+          ]
+        },
+        {
+          "date": "2026-07-09",
+          "title": "FlowDAgger: Human-in-the-Loop Adaptation of Generative Robot Policies in Latent Space",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2607.08877",
+          "tags": [
+            "Human-in-the-Loop",
+            "DAgger",
+            "Generative Policy",
+            "Action Inversion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test-time-policy-steering",
+      "title": "Test-Time Policy Steering",
+      "description": "These methods keep the base policy frozen and intervene in its action-generation process by re-ranking candidates, guiding denoising or flow trajectories, optimizing noise, or applying external value and constraint signals.",
+      "changes": "The sampling process, candidate action, noise variable, denoising or flow trajectory, or execution-time controller around a frozen policy.",
+      "strength": "It is modular and often data-light, making it attractive when the desired behavior already exists in the policy distribution.",
+      "limitation": "It usually cannot repair missing support; guidance quality, repeated sampling, and external models can also add substantial latency.",
+      "papers": [
+        {
+          "date": "2024-10-18",
+          "title": "Steering Your Generalists: Improving Robotic Foundation Models via Value Guidance",
+          "venue": "CoRL 2024",
+          "paper": "https://arxiv.org/abs/2410.13816",
+          "tags": [
+            "Value Guidance",
+            "Action Re-Ranking",
+            "Offline RL",
+            "Black-Box Steering"
+          ]
+        },
+        {
+          "date": "2025-06-16",
+          "title": "DynaGuide: Steering Diffusion Policies with Active Dynamic Guidance",
+          "venue": "NeurIPS 2025",
+          "paper": "https://arxiv.org/abs/2506.13922",
+          "tags": [
+            "Diffusion Guidance",
+            "Latent Dynamics",
+            "Model-Based Control"
+          ]
+        },
+        {
+          "date": "2025-08-08",
+          "title": "Latent Policy Barrier: Learning Robust Visuomotor Policies by Staying In-Distribution",
+          "venue": "NeurIPS 2025",
+          "paper": "https://arxiv.org/abs/2508.05941",
+          "tags": [
+            "Diffusion Policy",
+            "Latent Dynamics",
+            "OOD Detection",
+            "Recovery"
+          ]
+        },
+        {
+          "date": "2025-11-18",
+          "title": "Towards Deploying VLA without Fine-Tuning: Plug-and-Play Inference-Time VLA Policy Steering via Embodied Evolutionary Diffusion",
+          "venue": "RA-L 2026",
+          "paper": "https://arxiv.org/abs/2511.14178",
+          "project": "https://rip4kobe.github.io/vla-pilot/",
+          "tags": [
+            "VLA",
+            "Evolutionary Diffusion",
+            "VLM Reward",
+            "Training-Free"
+          ]
+        },
+        {
+          "date": "2026-02-03",
+          "title": "VLS: Steering Pretrained Robot Policies via Vision-Language Models",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2602.03973",
+          "tags": [
+            "VLM",
+            "Reward-Guided Denoising",
+            "Diffusion Policy",
+            "Flow Matching"
+          ]
+        },
+        {
+          "date": "2026-03-09",
+          "title": "OmniGuide: Universal Guidance Fields for Enhancing Generalist Robot Policies",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2603.10052",
+          "tags": [
+            "Guidance Field",
+            "VLA",
+            "Human Demonstrations",
+            "Flow Matching"
+          ]
+        },
+        {
+          "date": "2026-05-12",
+          "title": "Retrieve-then-Steer",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2605.10094",
+          "tags": [
+            "Retrieval",
+            "Test-Time Memory",
+            "Frozen Policy",
+            "Flow Policy"
+          ]
+        },
+        {
+          "date": "2026-06-12",
+          "title": "Improving Robotic Generalist Policies via Flow Reversal Steering",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2606.13675",
+          "tags": [
+            "Flow Matching",
+            "Flow Inversion",
+            "VLM Guidance",
+            "Noise-Space Policy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test-time-training",
+      "title": "Test-Time Training",
+      "description": "Test-time training updates a fast state, memory, representation, or a restricted set of weights from the robot's recent unlabeled experience. The learned update rule is usually prepared before deployment and executed online.",
+      "changes": "Fast weights, adaptive memory, temporal state, or perception and control representations updated during deployment.",
+      "strength": "It can absorb long deployment histories without requiring action labels or explicit task rewards at every step.",
+      "limitation": "The self-supervised proxy objective may not track task success, and continual updates can drift, forget, or destabilize control.",
+      "papers": [
+        {
+          "date": "2020-07-08",
+          "title": "Self-Supervised Policy Adaptation during Deployment",
+          "venue": "ICLR 2021",
+          "paper": "https://arxiv.org/abs/2007.04309",
+          "tags": [
+            "Self-Supervised Learning",
+            "Inverse Dynamics",
+            "Visual Shift",
+            "Policy Adaptation"
+          ]
+        },
+        {
+          "date": "2026-07-08",
+          "title": "WAM-TTT: Steering World-Action Models by Watching Human Play at Test Time",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2607.06988",
+          "tags": [
+            "World-Action Model",
+            "Human Video",
+            "Fast Weights",
+            "Test-Time Training"
+          ]
+        },
+        {
+          "date": "2026-07-16",
+          "title": "RoboTTT: Context Scaling for Robot Policies",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2607.15275",
+          "tags": [
+            "Long Context",
+            "Fast Weights",
+            "VLA",
+            "Human Video"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "in-context-learning-and-prompting",
+      "title": "In-Context Learning and Prompting",
+      "description": "These methods condition robot behavior on demonstrations, videos, language, or sensorimotor examples placed directly in the policy context. Adaptation happens through inference in a policy explicitly trained to interpret such prompts.",
+      "changes": "The deployment-time input context; policy parameters remain unchanged.",
+      "strength": "A user can specify a new task or behavior through examples without gradient updates or online reward optimization.",
+      "limitation": "The policy needs substantial prior training for the prompt modality, and prompting rarely creates behavior outside its learned action support.",
+      "papers": [
+        {
+          "date": "2024-08-28",
+          "title": "In-Context Imitation Learning via Next-Token Prediction (ICRT)",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2408.15980",
+          "tags": [
+            "Sensorimotor Prompt",
+            "Next-Token Prediction",
+            "Transformer",
+            "In-Context Learning"
+          ]
+        },
+        {
+          "date": "2024-11-19",
+          "title": "Instant Policy: In-Context Imitation Learning via Graph Diffusion",
+          "venue": "ICLR 2025",
+          "paper": "https://arxiv.org/abs/2411.12633",
+          "tags": [
+            "Graph Diffusion",
+            "One-Shot Imitation",
+            "3D Representation",
+            "Pseudo-Demonstrations"
+          ]
+        },
+        {
+          "date": "2025-05-27",
+          "title": "Learning Generalizable Robot Policy with Human Demonstration Video as a Prompt",
+          "venue": "ICRA 2026",
+          "paper": "https://arxiv.org/abs/2505.20795",
+          "tags": [
+            "Human Video Prompt",
+            "Cross-Embodiment",
+            "In-Context Learning"
+          ]
+        },
+        {
+          "date": "2025-12-08",
+          "title": "See Once, Then Act: VLA Task Learning from One-Shot Video Demonstrations (ViVLA)",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2512.07582",
+          "tags": [
+            "Human Video Prompt",
+            "Cross-Embodiment",
+            "Latent Action",
+            "VLA"
+          ]
+        },
+        {
+          "date": "2026-06-02",
+          "title": "Instant-Fold: In-Context Imitation Learning for Deformable Object Manipulation",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2606.04269",
+          "tags": [
+            "Deformable Manipulation",
+            "Human Demonstration",
+            "Flow Matching",
+            "3D Tokens"
+          ]
+        },
+        {
+          "date": "2026-06-29",
+          "title": "Behavior Prompting Policy: Demonstrations as Prompts for Manipulation",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2606.30457",
+          "project": "https://behavior-prompting.github.io/",
+          "tags": [
+            "Sensorimotor Prompt",
+            "Robot Demonstration",
+            "Behavior Prompting"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scaling-verification",
+      "title": "Scaling Verification",
+      "description": "Verification methods spend additional test-time compute to diversify instructions or action candidates and then select among them with a learned or model-based verifier. They separate generating candidate behavior from judging whether it matches the task.",
+      "changes": "The number and diversity of candidate prompts or action chunks, plus the verifier used to rank them.",
+      "strength": "It can improve a frozen policy without parameter updates when successful behavior is present but sampled too rarely or selected poorly.",
+      "limitation": "Performance is bounded jointly by candidate coverage, verifier calibration, and the latency budget available for repeated generation.",
+      "papers": [
+        {
+          "date": "2026-02-12",
+          "title": "Scaling Verification Can Be More Effective than Scaling Policy Learning for Vision-Language-Action Alignment",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2602.12281",
+          "tags": [
+            "Test-Time Scaling",
+            "Action Verification",
+            "VLA Alignment",
+            "Best-of-N"
+          ]
+        }
+      ]
+    }
+  ]
+}

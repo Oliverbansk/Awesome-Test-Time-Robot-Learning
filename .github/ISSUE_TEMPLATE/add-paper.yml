@@ -1,0 +1,58 @@
+name: Add a paper
+description: Suggest a paper for the curated index
+title: "[Paper] "
+labels:
+  - paper
+body:
+  - type: dropdown
+    id: line
+    attributes:
+      label: Primary line of work
+      options:
+        - RL Post-Training and Adaptation
+        - Test-Time Policy Steering
+        - Test-Time Training
+        - In-Context Learning and Prompting
+        - Scaling Verification
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Paper title
+      placeholder: Exact title from the paper
+    validations:
+      required: true
+  - type: input
+    id: paper_url
+    attributes:
+      label: Paper URL
+      placeholder: https://arxiv.org/abs/...
+    validations:
+      required: true
+  - type: input
+    id: release_date
+    attributes:
+      label: First public release date
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true
+  - type: input
+    id: venue
+    attributes:
+      label: Venue
+      placeholder: Conference 2026 or arXiv
+    validations:
+      required: true
+  - type: input
+    id: resources
+    attributes:
+      label: Official project or code URLs
+      placeholder: Optional
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why it belongs in this line
+      description: Identify what changes at deployment and what signal drives the change.
+    validations:
+      required: true
