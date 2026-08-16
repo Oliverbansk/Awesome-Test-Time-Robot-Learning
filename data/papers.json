@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-07-28",
+  "last_updated": "2026-08-17",
   "lines": [
     {
-      "id": "rl-post-training-and-adaptation",
-      "title": "RL Post-Training and Adaptation",
-      "description": "These methods use reward-bearing deployment interaction to update a policy, adapter, residual controller, or latent interface. They are the clearest route from choosing an existing behavior to reshaping a weak or missing action distribution.",
-      "changes": "Policy-side parameters, including full or partial policy weights, residual modules, low-rank adapters, and learned latent interfaces.",
-      "strength": "It can improve state-action associations and learn behavior that the frozen base policy does not reliably produce.",
-      "limitation": "Real-world interaction is expensive and introduces reset, exploration, safety, reward-design, and continual-consolidation problems.",
+      "id": "rl-post-training",
+      "title": "RL Post-Training",
+      "description": "These methods use reinforcement learning after task-level post-training to improve a policy, adapter, residual controller, or latent interface from reward-bearing interaction.",
+      "changes": "Policy-wide or restricted parameter optimization, residual control, latent-space optimization, or online actor-critic updates.",
+      "strength": "Can improve state-action associations using rewards and interaction beyond behavior cloning.",
+      "limitation": "Interaction cost, resets, safety, reward design, and stability of online optimization.",
       "papers": [
         {
           "date": "2024-07-23",
@@ -287,13 +287,26 @@
       ]
     },
     {
-      "id": "test-time-training",
-      "title": "Test-Time Training",
-      "description": "Test-time training updates a fast state, memory, representation, or a restricted set of weights from the robot's recent unlabeled experience. The learned update rule is usually prepared before deployment and executed online.",
-      "changes": "Fast weights, adaptive memory, temporal state, or perception and control representations updated during deployment.",
-      "strength": "It can absorb long deployment histories without requiring action labels or explicit task rewards at every step.",
-      "limitation": "The self-supervised proxy objective may not track task success, and continual updates can drift, forget, or destabilize control.",
+      "id": "test-time-adaptation-and-training",
+      "title": "Test-Time Adaptation and Training (TTA & TTT)",
+      "description": "These methods adapt a policy, representation, or temporal state from deployment data. They include gradient-based self-supervised adaptation, feedback-driven test-time optimization, fast-weight updates, and adaptive memories.",
+      "changes": "Model parameters or restricted adapters, fast weights, adaptive memory, temporal state, or perception and control representations.",
+      "strength": "Can respond to visual changes, temporal context, feedback, or model mismatch without a dedicated offline adaptation dataset for each deployment setting.",
+      "limitation": "The deployment objective or feedback signal may not track task success, and continual updates can drift, forget, or destabilize control.",
       "papers": [
+        {
+          "date": "2018-03-30",
+          "title": "Learning to Adapt in Dynamic, Real-World Environments Through Meta-Reinforcement Learning",
+          "venue": "ICLR 2019",
+          "paper": "https://arxiv.org/abs/1803.11347",
+          "tags": [
+            "Meta-Reinforcement Learning",
+            "Model-Based RL",
+            "Online Adaptation",
+            "Dynamics Model",
+            "MPC"
+          ]
+        },
         {
           "date": "2020-07-08",
           "title": "Self-Supervised Policy Adaptation during Deployment",
@@ -304,6 +317,54 @@
             "Inverse Dynamics",
             "Visual Shift",
             "Policy Adaptation"
+          ]
+        },
+        {
+          "date": "2023-07-03",
+          "title": "MoVie: Visual Model-Based Policy Adaptation for View Generalization",
+          "venue": "NeurIPS 2023",
+          "paper": "https://arxiv.org/abs/2307.00972",
+          "tags": [
+            "Test-Time Adaptation",
+            "View Generalization",
+            "Model-Based RL",
+            "Forward Dynamics"
+          ]
+        },
+        {
+          "date": "2023-11-22",
+          "title": "Fast-Slow Test-Time Adaptation for Online Vision-and-Language Navigation",
+          "venue": "ICML 2024",
+          "paper": "https://arxiv.org/abs/2311.13209",
+          "tags": [
+            "Test-Time Adaptation",
+            "Vision-Language Navigation",
+            "Entropy Minimization",
+            "Online Adaptation"
+          ]
+        },
+        {
+          "date": "2023-12-24",
+          "title": "ManipLLM: Embodied Multimodal Large Language Model for Object-Centric Robotic Manipulation",
+          "venue": "CVPR 2024",
+          "paper": "https://arxiv.org/abs/2312.16217",
+          "tags": [
+            "Test-Time Adaptation",
+            "Robot Manipulation",
+            "Multimodal LLM",
+            "Affordance"
+          ]
+        },
+        {
+          "date": "2025-07-13",
+          "title": "Test-Time Adaptation for Online Vision-Language Navigation with Feedback-based Reinforcement Learning",
+          "venue": "ICML 2025",
+          "paper": "https://proceedings.mlr.press/v267/kim25ad.html",
+          "tags": [
+            "Test-Time Adaptation",
+            "Vision-Language Navigation",
+            "Feedback-Based RL",
+            "REINFORCE"
           ]
         },
         {

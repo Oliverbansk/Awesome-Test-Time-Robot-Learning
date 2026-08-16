@@ -15,9 +15,9 @@ README_PATH = ROOT / "README.md"
 LISTS_START = "<!-- GENERATED_PAPER_LISTS_START -->"
 LISTS_END = "<!-- GENERATED_PAPER_LISTS_END -->"
 LINE_EMOJIS = {
-    "rl-post-training-and-adaptation": "🧪",
+    "rl-post-training": "🧪",
     "test-time-policy-steering": "🧭",
-    "test-time-training": "🧠",
+    "test-time-adaptation-and-training": "🧠",
     "in-context-learning-and-prompting": "🎬",
     "scaling-verification": "✅",
 }
@@ -60,7 +60,7 @@ def render_paper_lists(data: dict) -> str:
             "",
             line["description"],
             "",
-            f"**Deployment-time update:** {line['changes']}",
+            f"**Typical mechanism:** {line['changes']}",
             "",
             f"**Core advantage:** {line['strength']}",
             "",

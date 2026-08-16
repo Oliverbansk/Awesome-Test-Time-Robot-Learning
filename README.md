@@ -13,35 +13,28 @@ A paper belongs here when it changes deployment context; action sampling, guidan
 
 ## 🗺️ Research Map
 
-The taxonomy is mechanism-first: **what changes when the robot is already being deployed?**
-
 ![Research map of the five test-time robot learning lines](assets/research-map.svg)
 
-This is not a claim that every paper fits only one box. Hybrid methods are expected. Each paper is assigned to the line that best describes its **main deployment-time update mechanism**.
+The five lines are organized by their primary deployment-time mechanism and supervision source. Hybrid methods are expected; each paper is assigned to the line that best captures its central contribution.
 
 <details>
 <summary><strong>Compare the five lines</strong></summary>
 
-| Line | What changes | Typical supervision | Main capability | Main bottleneck |
+| Line | Core mechanism | Deployment signal | Expected effect | Main limitation |
 | --- | --- | --- | --- | --- |
-| RL Post-Training and Adaptation | Policy, adapter, residual, or latent-interface parameters | Rewards, success labels, interventions, online rollouts | Can reshape the action distribution and acquire missing behavior | Interaction cost, resets, safety, and reward design |
-| Test-Time Policy Steering | Action candidates, noise, denoising path, or sampler | Value functions, VLM rewards, dynamics, constraints | Selects or locally refines useful modes without retraining the base policy | Base-policy support and inference latency |
-| Test-Time Training | Fast weights, memory, state, or representations | Self-supervised losses from deployment history | Adapts perception and temporal state from unlabeled experience | Proxy-loss alignment, stability, and forgetting |
-| In-Context Learning and Prompting | Demonstrations, video, language, or sensorimotor context | Prompt examples supplied at deployment | Rapidly conditions behavior without parameter updates | Requires a policy trained to interpret the prompt modality |
-| Scaling Verification | Candidate diversity, test-time compute, and verifier decisions | Alignment, value, consistency, or success scores | Recovers good actions by sampling broadly and choosing well | Correct behavior must be sampled; the verifier must be reliable |
-
-Two distinctions are especially useful:
-
-- **Mode selection:** finding a behavior that already exists in the base policy's support.
-- **Distribution shaping:** changing the learned behavior because the required action mode is absent, unreliable, or poorly associated with the current observation.
+| RL Post-Training | RL optimization after task-level post-training | Rewards, success labels, interventions, online rollouts | Produces an RL-improved policy, adapter, residual controller, or latent interface | Interaction cost, resets, safety, and reward design |
+| Test-Time Policy Steering | Guides sampling, denoising, flow, or action selection at execution | Value functions, VLM rewards, dynamics, constraints | Improves action generation or selection for the current setting | Candidate coverage, guidance quality, and inference latency |
+| Test-Time Adaptation and Training (TTA & TTT) | Adapts restricted parameters, state, or representations from deployment data | Self-supervised losses, feedback, predictive objectives, trajectory history | Responds to distribution shift, temporal context, or model mismatch | Objective alignment, stability, and forgetting |
+| In-Context Learning and Prompting | Conditions a policy on demonstrations, video, language, or sensorimotor context | Prompt examples supplied at deployment | Uses demonstrations and instructions without a gradient update | Requires a policy trained to interpret the prompt modality |
+| Scaling Verification | Samples broadly and verifies candidate actions or instructions | Alignment, value, consistency, or success scores | Recovers better behavior through candidate generation and selection | Correct behavior must be sampled; the verifier must be reliable |
 
 </details>
 
 ## 📚 Contents
 
-- [🧪 RL Post-Training and Adaptation](#1-rl-post-training-and-adaptation)
+- [🧪 RL Post-Training](#1-rl-post-training)
 - [🧭 Test-Time Policy Steering](#2-test-time-policy-steering)
-- [🧠 Test-Time Training](#3-test-time-training)
+- [🧠 Test-Time Adaptation and Training (TTA & TTT)](#3-test-time-adaptation-and-training)
 - [🎬 In-Context Learning and Prompting](#4-in-context-learning-and-prompting)
 - [✅ Scaling Verification](#5-scaling-verification)
 - [🤝 Contributing](#contributing)
@@ -49,16 +42,16 @@ Two distinctions are especially useful:
 Papers are sorted by their first public release date, from oldest to newest. Venue denotes the latest known publication venue; otherwise it is listed as `arXiv`.
 
 <!-- GENERATED_PAPER_LISTS_START -->
-<a id="1-rl-post-training-and-adaptation"></a>
-## 1. 🧪 RL Post-Training and Adaptation
+<a id="1-rl-post-training"></a>
+## 1. 🧪 RL Post-Training
 
-These methods use reward-bearing deployment interaction to update a policy, adapter, residual controller, or latent interface. They are the clearest route from choosing an existing behavior to reshaping a weak or missing action distribution.
+These methods use reinforcement learning after task-level post-training to improve a policy, adapter, residual controller, or latent interface from reward-bearing interaction.
 
-**Deployment-time update:** Policy-side parameters, including full or partial policy weights, residual modules, low-rank adapters, and learned latent interfaces.
+**Typical mechanism:** Policy-wide or restricted parameter optimization, residual control, latent-space optimization, or online actor-critic updates.
 
-**Core advantage:** It can improve state-action associations and learn behavior that the frozen base policy does not reliably produce.
+**Core advantage:** Can improve state-action associations using rewards and interaction beyond behavior cloning.
 
-**Main limitation:** Real-world interaction is expensive and introduces reset, exploration, safety, reward-design, and continual-consolidation problems.
+**Main limitation:** Interaction cost, resets, safety, reward design, and stability of online optimization.
 
 **Papers (14)**
 
@@ -84,7 +77,7 @@ These methods use reward-bearing deployment interaction to update a policy, adap
 
 These methods keep the base policy frozen and intervene in its action-generation process by re-ranking candidates, guiding denoising or flow trajectories, optimizing noise, or applying external value and constraint signals.
 
-**Deployment-time update:** The sampling process, candidate action, noise variable, denoising or flow trajectory, or execution-time controller around a frozen policy.
+**Typical mechanism:** The sampling process, candidate action, noise variable, denoising or flow trajectory, or execution-time controller around a frozen policy.
 
 **Core advantage:** It is modular and often data-light, making it attractive when the desired behavior already exists in the policy distribution.
 
@@ -103,22 +96,27 @@ These methods keep the base policy frozen and intervene in its action-generation
 | 2026-05-12 | [Retrieve-then-Steer](https://arxiv.org/abs/2605.10094) | `arXiv` | - | Retrieval, Test-Time Memory, Frozen Policy, Flow Policy |
 | 2026-06-12 | [Improving Robotic Generalist Policies via Flow Reversal Steering](https://arxiv.org/abs/2606.13675) | `arXiv` | - | Flow Matching, Flow Inversion, VLM Guidance, Noise-Space Policy |
 
-<a id="3-test-time-training"></a>
-## 3. 🧠 Test-Time Training
+<a id="3-test-time-adaptation-and-training"></a>
+## 3. 🧠 Test-Time Adaptation and Training (TTA & TTT)
 
-Test-time training updates a fast state, memory, representation, or a restricted set of weights from the robot's recent unlabeled experience. The learned update rule is usually prepared before deployment and executed online.
+These methods adapt a policy, representation, or temporal state from deployment data. They include gradient-based self-supervised adaptation, feedback-driven test-time optimization, fast-weight updates, and adaptive memories.
 
-**Deployment-time update:** Fast weights, adaptive memory, temporal state, or perception and control representations updated during deployment.
+**Typical mechanism:** Model parameters or restricted adapters, fast weights, adaptive memory, temporal state, or perception and control representations.
 
-**Core advantage:** It can absorb long deployment histories without requiring action labels or explicit task rewards at every step.
+**Core advantage:** Can respond to visual changes, temporal context, feedback, or model mismatch without a dedicated offline adaptation dataset for each deployment setting.
 
-**Main limitation:** The self-supervised proxy objective may not track task success, and continual updates can drift, forget, or destabilize control.
+**Main limitation:** The deployment objective or feedback signal may not track task success, and continual updates can drift, forget, or destabilize control.
 
-**Papers (3)**
+**Papers (8)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
+| 2018-03-30 | [Learning to Adapt in Dynamic, Real-World Environments Through Meta-Reinforcement Learning](https://arxiv.org/abs/1803.11347) | `ICLR 2019` | - | Meta-Reinforcement Learning, Model-Based RL, Online Adaptation, Dynamics Model, MPC |
 | 2020-07-08 | [Self-Supervised Policy Adaptation during Deployment](https://arxiv.org/abs/2007.04309) | `ICLR 2021` | - | Self-Supervised Learning, Inverse Dynamics, Visual Shift, Policy Adaptation |
+| 2023-07-03 | [MoVie: Visual Model-Based Policy Adaptation for View Generalization](https://arxiv.org/abs/2307.00972) | `NeurIPS 2023` | - | Test-Time Adaptation, View Generalization, Model-Based RL, Forward Dynamics |
+| 2023-11-22 | [Fast-Slow Test-Time Adaptation for Online Vision-and-Language Navigation](https://arxiv.org/abs/2311.13209) | `ICML 2024` | - | Test-Time Adaptation, Vision-Language Navigation, Entropy Minimization, Online Adaptation |
+| 2023-12-24 | [ManipLLM: Embodied Multimodal Large Language Model for Object-Centric Robotic Manipulation](https://arxiv.org/abs/2312.16217) | `CVPR 2024` | - | Test-Time Adaptation, Robot Manipulation, Multimodal LLM, Affordance |
+| 2025-07-13 | [Test-Time Adaptation for Online Vision-Language Navigation with Feedback-based Reinforcement Learning](https://proceedings.mlr.press/v267/kim25ad.html) | `ICML 2025` | - | Test-Time Adaptation, Vision-Language Navigation, Feedback-Based RL, REINFORCE |
 | 2026-07-08 | [WAM-TTT: Steering World-Action Models by Watching Human Play at Test Time](https://arxiv.org/abs/2607.06988) | `arXiv` | - | World-Action Model, Human Video, Fast Weights, Test-Time Training |
 | 2026-07-16 | [RoboTTT: Context Scaling for Robot Policies](https://arxiv.org/abs/2607.15275) | `arXiv` | - | Long Context, Fast Weights, VLA, Human Video |
 
@@ -127,7 +125,7 @@ Test-time training updates a fast state, memory, representation, or a restricted
 
 These methods condition robot behavior on demonstrations, videos, language, or sensorimotor examples placed directly in the policy context. Adaptation happens through inference in a policy explicitly trained to interpret such prompts.
 
-**Deployment-time update:** The deployment-time input context; policy parameters remain unchanged.
+**Typical mechanism:** The deployment-time input context; policy parameters remain unchanged.
 
 **Core advantage:** A user can specify a new task or behavior through examples without gradient updates or online reward optimization.
 
@@ -149,7 +147,7 @@ These methods condition robot behavior on demonstrations, videos, language, or s
 
 Verification methods spend additional test-time compute to diversify instructions or action candidates and then select among them with a learned or model-based verifier. They separate generating candidate behavior from judging whether it matches the task.
 
-**Deployment-time update:** The number and diversity of candidate prompts or action chunks, plus the verifier used to rank them.
+**Typical mechanism:** The number and diversity of candidate prompts or action chunks, plus the verifier used to rank them.
 
 **Core advantage:** It can improve a frozen policy without parameter updates when successful behavior is present but sampled too rarely or selected poorly.
 
