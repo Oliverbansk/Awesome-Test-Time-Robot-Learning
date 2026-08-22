@@ -123,24 +123,33 @@ These methods adapt a policy, representation, or temporal state from deployment 
 <a id="4-in-context-learning-and-prompting"></a>
 ## 4. 🎬 In-Context Learning and Prompting
 
-These methods condition robot behavior on demonstrations, videos, language, or sensorimotor examples placed directly in the policy context. Adaptation happens through inference in a policy explicitly trained to interpret such prompts.
+These methods use demonstrations, videos, language, or sensorimotor trajectories in the deployment-time context to specify robot behavior. The direct in-context imitation subset predicts actions from task examples without task-specific parameter updates; the broader prompting subset studies compatible task interfaces such as human video and multimodal instructions.
 
-**Typical mechanism:** The deployment-time input context; policy parameters remain unchanged.
+**Typical mechanism:** The deployment-time context sequence; policy parameters are usually unchanged.
 
-**Core advantage:** A user can specify a new task or behavior through examples without gradient updates or online reward optimization.
+**Core advantage:** A user can specify a task, behavior, or constraint through examples without a task-specific gradient update or online reward optimization.
 
-**Main limitation:** The policy needs substantial prior training for the prompt modality, and prompting rarely creates behavior outside its learned action support.
+**Main limitation:** The policy must be trained to read the prompt modality, and reliable prompting does not guarantee the required low-level behavior is in the policy's learned repertoire.
 
-**Papers (6)**
+**Papers (15)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
+| 2017-03-21 | [One-Shot Imitation Learning](https://arxiv.org/abs/1703.07326) | `NeurIPS 2017` | - | Meta-Imitation, One-Shot Learning, Demonstration Conditioning, Attention |
+| 2021-05-13 | [Coarse-to-Fine Imitation Learning: Robot Manipulation from a Single Demonstration](https://arxiv.org/abs/2105.06411) | `ICRA 2021` | [Project](https://www.robot-learning.uk/coarse-to-fine-imitation-learning) | Single Demonstration, Human Video, Visual Servoing, Trajectory Replay |
+| 2022-02-04 | [BC-Z: Zero-Shot Task Generalization with Robotic Imitation Learning](https://arxiv.org/abs/2202.02005) | `CoRL 2021` | [Project](https://sites.google.com/view/bc-z/home) | Human Video Prompt, Task Embedding, Multi-Task Imitation, Real Robot |
+| 2022-10-06 | [VIMA: General Robot Manipulation with Multimodal Prompts](https://arxiv.org/abs/2210.03094) | `ICML 2023` | [Project](https://vimalabs.github.io/) | Multimodal Prompt, One-Shot Video Imitation, Cross-Attention, Simulation Benchmark |
+| 2023-01-18 | [Human-Timescale Adaptation in an Open-Ended Task Space](https://arxiv.org/abs/2301.07608) | `ICML 2023` | - | Meta-RL, Attention Memory, Embodied 3D, Demonstration Prompt |
+| 2024-03-19 | [Vid2Robot: End-to-End Video-Conditioned Policy Learning with Cross-Attention Transformers](https://arxiv.org/abs/2403.12943) | `RSS 2024` | [Project](https://vid2robot.github.io/) | Human Video Prompt, Cross-Embodiment, Cross-Attention, Paired Data |
 | 2024-08-28 | [In-Context Imitation Learning via Next-Token Prediction (ICRT)](https://arxiv.org/abs/2408.15980) | `arXiv` | - | Sensorimotor Prompt, Next-Token Prediction, Transformer, In-Context Learning |
 | 2024-11-19 | [Instant Policy: In-Context Imitation Learning via Graph Diffusion](https://arxiv.org/abs/2411.12633) | `ICLR 2025` | - | Graph Diffusion, One-Shot Imitation, 3D Representation, Pseudo-Demonstrations |
 | 2025-05-27 | [Learning Generalizable Robot Policy with Human Demonstration Video as a Prompt](https://arxiv.org/abs/2505.20795) | `ICRA 2026` | - | Human Video Prompt, Cross-Embodiment, In-Context Learning |
+| 2025-06-18 | [Robust Instant Policy: Leveraging Student's t-Regression Model for Robust In-context Imitation Learning of Robot Manipulation](https://arxiv.org/abs/2506.15157) | `arXiv` | [Project](https://sites.google.com/view/robustinstantpolicy) | In-Context Imitation, Trajectory Aggregation, Uncertainty, Real Robot |
 | 2025-12-08 | [See Once, Then Act: VLA Task Learning from One-Shot Video Demonstrations (ViVLA)](https://arxiv.org/abs/2512.07582) | `arXiv` | - | Human Video Prompt, Cross-Embodiment, Latent Action, VLA |
 | 2026-06-02 | [Instant-Fold: In-Context Imitation Learning for Deformable Object Manipulation](https://arxiv.org/abs/2606.04269) | `arXiv` | - | Deformable Manipulation, Human Demonstration, Flow Matching, 3D Tokens |
+| 2026-06-06 | [SynthICL: Scalable In-context Imitation Learning with Synthetic Data](https://arxiv.org/abs/2606.08154) | `arXiv` | [Project](https://synth-icl.github.io/) | Synthetic Data, RGB-Only, Flow Matching, One-Shot Imitation |
 | 2026-06-29 | [Behavior Prompting Policy: Demonstrations as Prompts for Manipulation](https://arxiv.org/abs/2606.30457) | `arXiv` | [Project](https://behavior-prompting.github.io/) | Sensorimotor Prompt, Robot Demonstration, Behavior Prompting |
+| 2026-08-19 | [GEN-1.5: Embodied Foundation Models are One-Shot Learners](https://generalistai.com/blog/gen-1.5) | `Generalist AI Blog` | - | Physical Prompting, Continuous Pretraining, Long Context, Few-Step Adaptation |
 
 <a id="5-scaling-verification"></a>
 ## 5. ✅ Scaling Verification

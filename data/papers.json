@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-08-17",
+  "last_updated": "2026-08-22",
   "lines": [
     {
       "id": "rl-post-training",
@@ -396,11 +396,87 @@
     {
       "id": "in-context-learning-and-prompting",
       "title": "In-Context Learning and Prompting",
-      "description": "These methods condition robot behavior on demonstrations, videos, language, or sensorimotor examples placed directly in the policy context. Adaptation happens through inference in a policy explicitly trained to interpret such prompts.",
-      "changes": "The deployment-time input context; policy parameters remain unchanged.",
-      "strength": "A user can specify a new task or behavior through examples without gradient updates or online reward optimization.",
-      "limitation": "The policy needs substantial prior training for the prompt modality, and prompting rarely creates behavior outside its learned action support.",
+      "description": "These methods use demonstrations, videos, language, or sensorimotor trajectories in the deployment-time context to specify robot behavior. The direct in-context imitation subset predicts actions from task examples without task-specific parameter updates; the broader prompting subset studies compatible task interfaces such as human video and multimodal instructions.",
+      "changes": "The deployment-time context sequence; policy parameters are usually unchanged.",
+      "strength": "A user can specify a task, behavior, or constraint through examples without a task-specific gradient update or online reward optimization.",
+      "limitation": "The policy must be trained to read the prompt modality, and reliable prompting does not guarantee the required low-level behavior is in the policy's learned repertoire.",
       "papers": [
+        {
+          "date": "2017-03-21",
+          "title": "One-Shot Imitation Learning",
+          "venue": "NeurIPS 2017",
+          "paper": "https://arxiv.org/abs/1703.07326",
+          "tags": [
+            "Meta-Imitation",
+            "One-Shot Learning",
+            "Demonstration Conditioning",
+            "Attention"
+          ]
+        },
+        {
+          "date": "2021-05-13",
+          "title": "Coarse-to-Fine Imitation Learning: Robot Manipulation from a Single Demonstration",
+          "venue": "ICRA 2021",
+          "paper": "https://arxiv.org/abs/2105.06411",
+          "project": "https://www.robot-learning.uk/coarse-to-fine-imitation-learning",
+          "tags": [
+            "Single Demonstration",
+            "Human Video",
+            "Visual Servoing",
+            "Trajectory Replay"
+          ]
+        },
+        {
+          "date": "2022-02-04",
+          "title": "BC-Z: Zero-Shot Task Generalization with Robotic Imitation Learning",
+          "venue": "CoRL 2021",
+          "paper": "https://arxiv.org/abs/2202.02005",
+          "project": "https://sites.google.com/view/bc-z/home",
+          "tags": [
+            "Human Video Prompt",
+            "Task Embedding",
+            "Multi-Task Imitation",
+            "Real Robot"
+          ]
+        },
+        {
+          "date": "2022-10-06",
+          "title": "VIMA: General Robot Manipulation with Multimodal Prompts",
+          "venue": "ICML 2023",
+          "paper": "https://arxiv.org/abs/2210.03094",
+          "project": "https://vimalabs.github.io/",
+          "tags": [
+            "Multimodal Prompt",
+            "One-Shot Video Imitation",
+            "Cross-Attention",
+            "Simulation Benchmark"
+          ]
+        },
+        {
+          "date": "2023-01-18",
+          "title": "Human-Timescale Adaptation in an Open-Ended Task Space",
+          "venue": "ICML 2023",
+          "paper": "https://arxiv.org/abs/2301.07608",
+          "tags": [
+            "Meta-RL",
+            "Attention Memory",
+            "Embodied 3D",
+            "Demonstration Prompt"
+          ]
+        },
+        {
+          "date": "2024-03-19",
+          "title": "Vid2Robot: End-to-End Video-Conditioned Policy Learning with Cross-Attention Transformers",
+          "venue": "RSS 2024",
+          "paper": "https://arxiv.org/abs/2403.12943",
+          "project": "https://vid2robot.github.io/",
+          "tags": [
+            "Human Video Prompt",
+            "Cross-Embodiment",
+            "Cross-Attention",
+            "Paired Data"
+          ]
+        },
         {
           "date": "2024-08-28",
           "title": "In-Context Imitation Learning via Next-Token Prediction (ICRT)",
@@ -437,6 +513,19 @@
           ]
         },
         {
+          "date": "2025-06-18",
+          "title": "Robust Instant Policy: Leveraging Student's t-Regression Model for Robust In-context Imitation Learning of Robot Manipulation",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2506.15157",
+          "project": "https://sites.google.com/view/robustinstantpolicy",
+          "tags": [
+            "In-Context Imitation",
+            "Trajectory Aggregation",
+            "Uncertainty",
+            "Real Robot"
+          ]
+        },
+        {
           "date": "2025-12-08",
           "title": "See Once, Then Act: VLA Task Learning from One-Shot Video Demonstrations (ViVLA)",
           "venue": "arXiv",
@@ -461,6 +550,19 @@
           ]
         },
         {
+          "date": "2026-06-06",
+          "title": "SynthICL: Scalable In-context Imitation Learning with Synthetic Data",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2606.08154",
+          "project": "https://synth-icl.github.io/",
+          "tags": [
+            "Synthetic Data",
+            "RGB-Only",
+            "Flow Matching",
+            "One-Shot Imitation"
+          ]
+        },
+        {
           "date": "2026-06-29",
           "title": "Behavior Prompting Policy: Demonstrations as Prompts for Manipulation",
           "venue": "arXiv",
@@ -470,6 +572,18 @@
             "Sensorimotor Prompt",
             "Robot Demonstration",
             "Behavior Prompting"
+          ]
+        },
+        {
+          "date": "2026-08-19",
+          "title": "GEN-1.5: Embodied Foundation Models are One-Shot Learners",
+          "venue": "Generalist AI Blog",
+          "paper": "https://generalistai.com/blog/gen-1.5",
+          "tags": [
+            "Physical Prompting",
+            "Continuous Pretraining",
+            "Long Context",
+            "Few-Step Adaptation"
           ]
         }
       ]
