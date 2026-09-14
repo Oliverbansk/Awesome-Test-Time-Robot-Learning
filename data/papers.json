@@ -393,6 +393,18 @@
           ]
         },
         {
+          "date": "2026-07-01",
+          "title": "FAR: Failure-Aware Retry for Test-Time Recovery and Continual Policy Improvement",
+          "venue": "CoRL 2026",
+          "paper": "https://arxiv.org/abs/2607.01111",
+          "tags": [
+            "Failure Recovery",
+            "Preference Adaptation",
+            "Continual Policy Improvement",
+            "Action Perturbation"
+          ]
+        },
+        {
           "date": "2026-07-08",
           "title": "WAM-TTT: Steering World-Action Models by Watching Human Play at Test Time",
           "venue": "arXiv",
