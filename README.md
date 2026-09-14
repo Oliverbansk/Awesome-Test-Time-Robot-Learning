@@ -69,7 +69,7 @@ These methods use reinforcement learning after task-level post-training to impro
 | 2025-10-16 | [RL-100: Performant Robotic Manipulation with Real-World Reinforcement Learning](https://arxiv.org/abs/2510.14830) | `Science Robotics` | [Project](https://lei-kun.github.io/RL-100/) | Real-World RL, Offline-to-Online RL, Diffusion Policy |
 | 2026-01-11 | [On-the-Fly VLA Adaptation via Test-Time Reinforcement Learning](https://arxiv.org/abs/2601.06748) | `arXiv` | - | VLA, Test-Time RL, LoRA, Online Adaptation |
 | 2026-02-13 | [Beyond Imitation: Reinforcement Learning-Based Sim-Real Co-Training for VLA Models](https://arxiv.org/abs/2602.12628) | `ICRA 2026 Workshop` | - | VLA, Sim-to-Real, Co-Training, RL Fine-Tuning |
-| 2026-05-12 | [TMRL: Diffusion Timestep-Modulated Pretraining Enables Exploration for Efficient Policy Finetuning](https://arxiv.org/abs/2605.12236) | `arXiv` | - | Diffusion Policy, Exploration, RL Fine-Tuning, Action Coverage |
+| 2026-05-12 | [TMRL: Diffusion Timestep-Modulated Pretraining Enables Exploration for Efficient Policy Finetuning](https://arxiv.org/abs/2605.12236) | `RSS 2026` | - | Diffusion Policy, Exploration, RL Fine-Tuning, Action Coverage |
 | 2026-05-19 | [Beyond Action Residuals: Real-World Robot Policy Steering via Bottleneck Latent Reinforcement Learning](https://arxiv.org/abs/2605.19919) | `arXiv` | [Project](https://manutdmoon.github.io/ZPRL/) | Latent-Space RL, Flow Matching, Real-World RL, Policy Adaptation |
 | 2026-06-30 | [Adapting Generalist Robot Policies with Semantic Reinforcement Learning](https://arxiv.org/abs/2606.31958) | `arXiv` | - | VLA, Semantic Actions, Real-World RL, Online Adaptation |
 | 2026-07-09 | [FlowDAgger: Human-in-the-Loop Adaptation of Generative Robot Policies in Latent Space](https://arxiv.org/abs/2607.08877) | `arXiv` | - | Human-in-the-Loop, DAgger, Generative Policy, Action Inversion |
@@ -135,7 +135,7 @@ These methods use demonstrations, videos, language, or sensorimotor trajectories
 
 **Main limitation:** The policy must be trained to read the prompt modality, and reliable prompting does not guarantee the required low-level behavior is in the policy's learned repertoire.
 
-**Papers (16)**
+**Papers (17)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
@@ -145,14 +145,15 @@ These methods use demonstrations, videos, language, or sensorimotor trajectories
 | 2022-10-06 | [VIMA: General Robot Manipulation with Multimodal Prompts](https://arxiv.org/abs/2210.03094) | `ICML 2023` | [Project](https://vimalabs.github.io/) | Multimodal Prompt, One-Shot Video Imitation, Cross-Attention, Simulation Benchmark |
 | 2023-01-18 | [Human-Timescale Adaptation in an Open-Ended Task Space](https://arxiv.org/abs/2301.07608) | `ICML 2023` | - | Meta-RL, Attention Memory, Embodied 3D, Demonstration Prompt |
 | 2024-03-19 | [Vid2Robot: End-to-End Video-Conditioned Policy Learning with Cross-Attention Transformers](https://arxiv.org/abs/2403.12943) | `RSS 2024` | [Project](https://vid2robot.github.io/) | Human Video Prompt, Cross-Embodiment, Cross-Attention, Paired Data |
-| 2024-08-28 | [In-Context Imitation Learning via Next-Token Prediction (ICRT)](https://arxiv.org/abs/2408.15980) | `arXiv` | - | Sensorimotor Prompt, Next-Token Prediction, Transformer, In-Context Learning |
+| 2024-08-28 | [In-Context Imitation Learning via Next-Token Prediction (ICRT)](https://arxiv.org/abs/2408.15980) | `ICRA 2025` | - | Sensorimotor Prompt, Next-Token Prediction, Transformer, In-Context Learning |
 | 2024-11-19 | [Instant Policy: In-Context Imitation Learning via Graph Diffusion](https://arxiv.org/abs/2411.12633) | `ICLR 2025` | - | Graph Diffusion, One-Shot Imitation, 3D Representation, Pseudo-Demonstrations |
 | 2025-05-27 | [Learning Generalizable Robot Policy with Human Demonstration Video as a Prompt](https://arxiv.org/abs/2505.20795) | `ICRA 2026` | - | Human Video Prompt, Cross-Embodiment, In-Context Learning |
-| 2025-06-18 | [Robust Instant Policy: Leveraging Student's t-Regression Model for Robust In-context Imitation Learning of Robot Manipulation](https://arxiv.org/abs/2506.15157) | `arXiv` | [Project](https://sites.google.com/view/robustinstantpolicy) | In-Context Imitation, Trajectory Aggregation, Uncertainty, Real Robot |
+| 2025-06-18 | [Robust Instant Policy: Leveraging Student's t-Regression Model for Robust In-context Imitation Learning of Robot Manipulation](https://arxiv.org/abs/2506.15157) | `IROS 2025` | [Project](https://sites.google.com/view/robustinstantpolicy) | In-Context Imitation, Trajectory Aggregation, Uncertainty, Real Robot |
 | 2025-12-08 | [See Once, Then Act: VLA Task Learning from One-Shot Video Demonstrations (ViVLA)](https://arxiv.org/abs/2512.07582) | `arXiv` | - | Human Video Prompt, Cross-Embodiment, Latent Action, VLA |
-| 2026-06-02 | [Instant-Fold: In-Context Imitation Learning for Deformable Object Manipulation](https://arxiv.org/abs/2606.04269) | `arXiv` | - | Deformable Manipulation, Human Demonstration, Flow Matching, 3D Tokens |
-| 2026-06-06 | [SynthICL: Scalable In-context Imitation Learning with Synthetic Data](https://arxiv.org/abs/2606.08154) | `arXiv` | [Project](https://synth-icl.github.io/) | Synthetic Data, RGB-Only, Flow Matching, One-Shot Imitation |
-| 2026-06-29 | [Behavior Prompting Policy: Demonstrations as Prompts for Manipulation](https://arxiv.org/abs/2606.30457) | `arXiv` | [Project](https://behavior-prompting.github.io/) | Sensorimotor Prompt, Robot Demonstration, Behavior Prompting |
+| 2026-06-02 | [Instant-Fold: In-Context Imitation Learning for Deformable Object Manipulation](https://arxiv.org/abs/2606.04269) | `CoRL 2026` | - | Deformable Manipulation, Human Demonstration, Flow Matching, 3D Tokens |
+| 2026-06-06 | [SynthICL: Scalable In-context Imitation Learning with Synthetic Data](https://arxiv.org/abs/2606.08154) | `CoRL 2026` | [Project](https://synth-icl.github.io/) | Synthetic Data, RGB-Only, Flow Matching, One-Shot Imitation |
+| 2026-06-29 | [Behavior Prompting Policy: Demonstrations as Prompts for Manipulation](https://arxiv.org/abs/2606.30457) | `CoRL 2026` | [Project](https://behavior-prompting.github.io/) | Sensorimotor Prompt, Robot Demonstration, Behavior Prompting |
+| 2026-08-18 | [Introducing S1: In-Context Learning for Robotics](https://www.skild.ai/blogs/s1) | `Skild AI Blog` | - | In-Context Learning, Video Prompt, Cross-Embodiment, Long-Horizon Manipulation |
 | 2026-08-19 | [GEN-1.5: Embodied Foundation Models are One-Shot Learners](https://generalistai.com/blog/gen-1.5) | `Generalist AI Blog` | - | Physical Prompting, Continuous Pretraining, Long Context, Few-Step Adaptation |
 | 2026-08-26 | [RA-VLA: Retrieval-Augmented VLA for Test-Time Adaptation](https://arxiv.org/abs/2608.25585) | `arXiv` | - | VLA, In-Context Imitation, Behavior-Aligned Retrieval, Flow Matching |
 
@@ -172,7 +173,7 @@ These methods allocate additional inference compute to reason, sample, search, p
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
 | 2024-07-11 | [Robotic Control via Embodied Chain-of-Thought Reasoning](https://arxiv.org/abs/2407.08693) | `CoRL 2024` | [Project](https://embodied-cot.github.io/) / [Code](https://github.com/MichalZawalski/embodied-CoT) | VLA, Embodied Chain-of-Thought, Grounded Reasoning, Intermediate Computation |
-| 2025-06-21 | [RoboMonkey: Scaling Test-Time Sampling and Verification for Vision-Language-Action Models](https://arxiv.org/abs/2506.17811) | `arXiv` | [Project](https://robomonkey-vla.github.io/) | VLA, Test-Time Sampling, Action Verification, Inference Scaling Law |
+| 2025-06-21 | [RoboMonkey: Scaling Test-Time Sampling and Verification for Vision-Language-Action Models](https://arxiv.org/abs/2506.17811) | `RSS 2025 OOD Workshop` | [Project](https://robomonkey-vla.github.io/) | VLA, Test-Time Sampling, Action Verification, Inference Scaling Law |
 | 2025-10-07 | [Verifier-free Test-Time Sampling for Vision-Language-Action Models](https://arxiv.org/abs/2510.05681) | `ICLR 2026` | [Project](https://suhyeok-jang.github.io/mg-select/) / [Code](https://github.com/suhyeok-jang/mg-select) | VLA, Verifier-Free Selection, Condition Masking, Best-of-N |
 | 2025-10-13 | [RoVer: Robot Reward Model as Test-Time Verifier for Vision-Language-Action Model](https://arxiv.org/abs/2510.10975) | `arXiv` | - | VLA, Process Reward Model, Candidate Refinement, Test-Time Verification |
 | 2025-12-02 | [Steering Vision-Language-Action Models as Anti-Exploration: A Test-Time Scaling Approach](https://arxiv.org/abs/2512.02834) | `arXiv` | - | VLA, Flow Matching, Pseudo-Count Verifier, Best-of-N |
@@ -197,7 +198,7 @@ These methods use deployment rollouts, failures, corrections, or model-generated
 | --- | --- | --- | --- | --- |
 | 2023-06-20 | [RoboCat: A Self-Improving Generalist Agent for Robotic Manipulation](https://arxiv.org/abs/2306.11706) | `TMLR 2024` | - | Generalist Policy, Self-Generated Data, Iterative Training, Multi-Embodiment |
 | 2025-09-09 | [RaC: Robot Learning for Long-Horizon Tasks by Scaling Recovery and Correction](https://arxiv.org/abs/2509.07953) | `arXiv` | [Project](https://rac-scaling-robot.github.io/) | Long-Horizon Manipulation, Human Intervention, Recovery Data, Iterative Imitation Learning |
-| 2025-10-30 | [Self-Improving Vision-Language-Action Models with Data Generation via Residual RL](https://arxiv.org/abs/2511.00091) | `arXiv` | [Project](https://wenlixiao.com/self-improve-VLA-PLD) | VLA, Residual RL, Deployment-Aligned Data, Policy Distillation |
+| 2025-10-30 | [Self-Improving Vision-Language-Action Models with Data Generation via Residual RL](https://arxiv.org/abs/2511.00091) | `ICLR 2026` | [Project](https://wenlixiao.com/self-improve-VLA-PLD) | VLA, Residual RL, Deployment-Aligned Data, Policy Distillation |
 | 2026-02-12 | [VLAW: Iterative Co-Improvement of Vision-Language-Action Policy and World Model](https://arxiv.org/abs/2602.12063) | `arXiv` | [Project](https://sites.google.com/view/vlaw-arxiv) | VLA, World Model, Synthetic Rollouts, Iterative Co-Improvement |
 | 2026-03-17 | [DreamPlan: Efficient Reinforcement Fine-Tuning of Vision-Language Planners via Video World Models](https://arxiv.org/abs/2603.16860) | `arXiv` | [Project](https://psi-lab.ai/DreamPlan/) | Vision-Language Planner, Video World Model, Synthetic Rollouts, Reinforcement Fine-Tuning |
 | 2026-05-06 | [When Life Gives You BC, Make Q-functions: Extracting Q-values from Behavior Cloning for On-Robot Reinforcement Learning](https://arxiv.org/abs/2605.05172) | `arXiv` | [Project](https://q2rl.rai-inst.com/) | Offline-to-Online RL, Q-Estimation, Q-Gating, On-Robot Learning |

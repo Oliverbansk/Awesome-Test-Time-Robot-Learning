@@ -132,7 +132,7 @@
         {
           "date": "2026-05-12",
           "title": "TMRL: Diffusion Timestep-Modulated Pretraining Enables Exploration for Efficient Policy Finetuning",
-          "venue": "arXiv",
+          "venue": "RSS 2026",
           "paper": "https://arxiv.org/abs/2605.12236",
           "tags": [
             "Diffusion Policy",
@@ -505,7 +505,7 @@
         {
           "date": "2024-08-28",
           "title": "In-Context Imitation Learning via Next-Token Prediction (ICRT)",
-          "venue": "arXiv",
+          "venue": "ICRA 2025",
           "paper": "https://arxiv.org/abs/2408.15980",
           "tags": [
             "Sensorimotor Prompt",
@@ -540,7 +540,7 @@
         {
           "date": "2025-06-18",
           "title": "Robust Instant Policy: Leveraging Student's t-Regression Model for Robust In-context Imitation Learning of Robot Manipulation",
-          "venue": "arXiv",
+          "venue": "IROS 2025",
           "paper": "https://arxiv.org/abs/2506.15157",
           "project": "https://sites.google.com/view/robustinstantpolicy",
           "tags": [
@@ -565,7 +565,7 @@
         {
           "date": "2026-06-02",
           "title": "Instant-Fold: In-Context Imitation Learning for Deformable Object Manipulation",
-          "venue": "arXiv",
+          "venue": "CoRL 2026",
           "paper": "https://arxiv.org/abs/2606.04269",
           "tags": [
             "Deformable Manipulation",
@@ -577,7 +577,7 @@
         {
           "date": "2026-06-06",
           "title": "SynthICL: Scalable In-context Imitation Learning with Synthetic Data",
-          "venue": "arXiv",
+          "venue": "CoRL 2026",
           "paper": "https://arxiv.org/abs/2606.08154",
           "project": "https://synth-icl.github.io/",
           "tags": [
@@ -590,13 +590,25 @@
         {
           "date": "2026-06-29",
           "title": "Behavior Prompting Policy: Demonstrations as Prompts for Manipulation",
-          "venue": "arXiv",
+          "venue": "CoRL 2026",
           "paper": "https://arxiv.org/abs/2606.30457",
           "project": "https://behavior-prompting.github.io/",
           "tags": [
             "Sensorimotor Prompt",
             "Robot Demonstration",
             "Behavior Prompting"
+          ]
+        },
+        {
+          "date": "2026-08-18",
+          "title": "Introducing S1: In-Context Learning for Robotics",
+          "venue": "Skild AI Blog",
+          "paper": "https://www.skild.ai/blogs/s1",
+          "tags": [
+            "In-Context Learning",
+            "Video Prompt",
+            "Cross-Embodiment",
+            "Long-Horizon Manipulation"
           ]
         },
         {
@@ -650,7 +662,7 @@
         {
           "date": "2025-06-21",
           "title": "RoboMonkey: Scaling Test-Time Sampling and Verification for Vision-Language-Action Models",
-          "venue": "arXiv",
+          "venue": "RSS 2025 OOD Workshop",
           "paper": "https://arxiv.org/abs/2506.17811",
           "project": "https://robomonkey-vla.github.io/",
           "tags": [
@@ -774,7 +786,7 @@
         {
           "date": "2025-10-30",
           "title": "Self-Improving Vision-Language-Action Models with Data Generation via Residual RL",
-          "venue": "arXiv",
+          "venue": "ICLR 2026",
           "paper": "https://arxiv.org/abs/2511.00091",
           "project": "https://wenlixiao.com/self-improve-VLA-PLD",
           "tags": [
