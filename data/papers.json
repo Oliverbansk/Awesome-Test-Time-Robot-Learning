@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-08-22",
+  "last_updated": "2026-09-14",
   "lines": [
     {
       "id": "rl-post-training",
@@ -273,6 +273,19 @@
           ]
         },
         {
+          "date": "2026-06-09",
+          "title": "Test-Time Gradient Guidance of Flow Policies in Reinforcement Learning",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2606.11087",
+          "code": "https://github.com/zhouzypaul/qgf",
+          "tags": [
+            "Flow Matching",
+            "Q-Guidance",
+            "Offline RL",
+            "Frozen Policy"
+          ]
+        },
+        {
           "date": "2026-06-12",
           "title": "Improving Robotic Generalist Policies via Flow Reversal Steering",
           "venue": "arXiv",
@@ -282,6 +295,18 @@
             "Flow Inversion",
             "VLM Guidance",
             "Noise-Space Policy"
+          ]
+        },
+        {
+          "date": "2026-07-02",
+          "title": "Guided Action Flow: Q-Guided Inference for Flow-Matching Vision-Language-Action Policies",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2607.02092",
+          "tags": [
+            "VLA",
+            "Flow Matching",
+            "Q-Guidance",
+            "Real Robot"
           ]
         }
       ]
@@ -585,6 +610,18 @@
             "Long Context",
             "Few-Step Adaptation"
           ]
+        },
+        {
+          "date": "2026-08-26",
+          "title": "RA-VLA: Retrieval-Augmented VLA for Test-Time Adaptation",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2608.25585",
+          "tags": [
+            "VLA",
+            "In-Context Imitation",
+            "Behavior-Aligned Retrieval",
+            "Flow Matching"
+          ]
         }
       ]
     },
@@ -606,6 +643,19 @@
             "Action Verification",
             "VLA Alignment",
             "Best-of-N"
+          ]
+        },
+        {
+          "date": "2026-08-17",
+          "title": "τ0-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2608.16885",
+          "project": "https://tau0-vla.github.io/",
+          "tags": [
+            "Hierarchical VLA",
+            "World Model",
+            "Test-Time Compute",
+            "Subtask Verification"
           ]
         }
       ]

@@ -83,7 +83,7 @@ These methods keep the base policy frozen and intervene in its action-generation
 
 **Main limitation:** It usually cannot repair missing support; guidance quality, repeated sampling, and external models can also add substantial latency.
 
-**Papers (8)**
+**Papers (10)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
@@ -94,7 +94,9 @@ These methods keep the base policy frozen and intervene in its action-generation
 | 2026-02-03 | [VLS: Steering Pretrained Robot Policies via Vision-Language Models](https://arxiv.org/abs/2602.03973) | `arXiv` | - | VLM, Reward-Guided Denoising, Diffusion Policy, Flow Matching |
 | 2026-03-09 | [OmniGuide: Universal Guidance Fields for Enhancing Generalist Robot Policies](https://arxiv.org/abs/2603.10052) | `arXiv` | - | Guidance Field, VLA, Human Demonstrations, Flow Matching |
 | 2026-05-12 | [Retrieve-then-Steer](https://arxiv.org/abs/2605.10094) | `arXiv` | - | Retrieval, Test-Time Memory, Frozen Policy, Flow Policy |
+| 2026-06-09 | [Test-Time Gradient Guidance of Flow Policies in Reinforcement Learning](https://arxiv.org/abs/2606.11087) | `arXiv` | [Code](https://github.com/zhouzypaul/qgf) | Flow Matching, Q-Guidance, Offline RL, Frozen Policy |
 | 2026-06-12 | [Improving Robotic Generalist Policies via Flow Reversal Steering](https://arxiv.org/abs/2606.13675) | `arXiv` | - | Flow Matching, Flow Inversion, VLM Guidance, Noise-Space Policy |
+| 2026-07-02 | [Guided Action Flow: Q-Guided Inference for Flow-Matching Vision-Language-Action Policies](https://arxiv.org/abs/2607.02092) | `arXiv` | - | VLA, Flow Matching, Q-Guidance, Real Robot |
 
 <a id="3-test-time-adaptation-and-training"></a>
 ## 3. 🧠 Test-Time Adaptation and Training (TTA & TTT)
@@ -131,7 +133,7 @@ These methods use demonstrations, videos, language, or sensorimotor trajectories
 
 **Main limitation:** The policy must be trained to read the prompt modality, and reliable prompting does not guarantee the required low-level behavior is in the policy's learned repertoire.
 
-**Papers (15)**
+**Papers (16)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
@@ -150,6 +152,7 @@ These methods use demonstrations, videos, language, or sensorimotor trajectories
 | 2026-06-06 | [SynthICL: Scalable In-context Imitation Learning with Synthetic Data](https://arxiv.org/abs/2606.08154) | `arXiv` | [Project](https://synth-icl.github.io/) | Synthetic Data, RGB-Only, Flow Matching, One-Shot Imitation |
 | 2026-06-29 | [Behavior Prompting Policy: Demonstrations as Prompts for Manipulation](https://arxiv.org/abs/2606.30457) | `arXiv` | [Project](https://behavior-prompting.github.io/) | Sensorimotor Prompt, Robot Demonstration, Behavior Prompting |
 | 2026-08-19 | [GEN-1.5: Embodied Foundation Models are One-Shot Learners](https://generalistai.com/blog/gen-1.5) | `Generalist AI Blog` | - | Physical Prompting, Continuous Pretraining, Long Context, Few-Step Adaptation |
+| 2026-08-26 | [RA-VLA: Retrieval-Augmented VLA for Test-Time Adaptation](https://arxiv.org/abs/2608.25585) | `arXiv` | - | VLA, In-Context Imitation, Behavior-Aligned Retrieval, Flow Matching |
 
 <a id="5-scaling-verification"></a>
 ## 5. ✅ Scaling Verification
@@ -162,11 +165,12 @@ Verification methods spend additional test-time compute to diversify instruction
 
 **Main limitation:** Performance is bounded jointly by candidate coverage, verifier calibration, and the latency budget available for repeated generation.
 
-**Papers (1)**
+**Papers (2)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
 | 2026-02-12 | [Scaling Verification Can Be More Effective than Scaling Policy Learning for Vision-Language-Action Alignment](https://arxiv.org/abs/2602.12281) | `arXiv` | - | Test-Time Scaling, Action Verification, VLA Alignment, Best-of-N |
+| 2026-08-17 | [τ0-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation](https://arxiv.org/abs/2608.16885) | `arXiv` | [Project](https://tau0-vla.github.io/) | Hierarchical VLA, World Model, Test-Time Compute, Subtask Verification |
 <!-- GENERATED_PAPER_LISTS_END -->
 
 <a id="contributing"></a>
