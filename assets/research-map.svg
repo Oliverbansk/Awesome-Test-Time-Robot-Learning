@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="240" viewBox="0 0 1400 240" role="img" aria-labelledby="title desc">
   <title id="title">Test-time robot learning research map</title>
-  <desc id="desc">A post-trained robot policy connects to five lines of test-time robot learning research.</desc>
+  <desc id="desc">A post-trained robot policy connects to six lines of test-time robot learning research.</desc>
   <defs>
     <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
       <path d="M0,0 L8,4 L0,8 Z" fill="#64748b"/>
@@ -16,44 +16,49 @@
     </style>
   </defs>
 
-  <rect x="1" y="1" width="1198" height="238" rx="8" fill="#ffffff" stroke="#d8dee9" stroke-width="2"/>
+  <rect x="1" y="1" width="1398" height="238" rx="8" fill="#ffffff" stroke="#d8dee9" stroke-width="2"/>
 
   <rect x="30" y="18" width="330" height="58" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
   <text class="label primary" x="195" y="43">Post-trained robot policy</text>
   <text class="label secondary" x="195" y="64">in a deployment environment</text>
 
-  <path class="arrow" d="M360 47 H440"/>
-  <rect x="450" y="18" width="300" height="58" rx="8" fill="#172033"/>
-  <text class="label primary inverse" x="600" y="54">Test-Time Robot Learning</text>
+  <path class="arrow" d="M360 47 H540"/>
+  <rect x="550" y="18" width="300" height="58" rx="8" fill="#172033"/>
+  <text class="label primary inverse" x="700" y="54">Test-Time Robot Learning</text>
 
-  <path class="branch" d="M600 76 V94 H132 V102"/>
-  <path class="branch" d="M600 94 H366 V102"/>
-  <path class="branch" d="M600 94 V102"/>
-  <path class="branch" d="M600 94 H834 V102"/>
-  <path class="branch" d="M600 94 H1068 V102"/>
-  <path d="M128 98 L132 106 L136 98 Z" fill="#94a3b8"/>
-  <path d="M362 98 L366 106 L370 98 Z" fill="#94a3b8"/>
-  <path d="M596 98 L600 106 L604 98 Z" fill="#94a3b8"/>
-  <path d="M830 98 L834 106 L838 98 Z" fill="#94a3b8"/>
-  <path d="M1064 98 L1068 106 L1072 98 Z" fill="#94a3b8"/>
+  <path class="branch" d="M700 76 V94 H122 V102"/>
+  <path class="branch" d="M700 94 H353 V102"/>
+  <path class="branch" d="M700 94 H584 V102"/>
+  <path class="branch" d="M700 94 H816 V102"/>
+  <path class="branch" d="M700 94 H1047 V102"/>
+  <path class="branch" d="M700 94 H1278 V102"/>
+  <path d="M118 98 L122 106 L126 98 Z" fill="#94a3b8"/>
+  <path d="M349 98 L353 106 L357 98 Z" fill="#94a3b8"/>
+  <path d="M580 98 L584 106 L588 98 Z" fill="#94a3b8"/>
+  <path d="M812 98 L816 106 L820 98 Z" fill="#94a3b8"/>
+  <path d="M1043 98 L1047 106 L1051 98 Z" fill="#94a3b8"/>
+  <path d="M1274 98 L1278 106 L1282 98 Z" fill="#94a3b8"/>
 
-  <rect x="24" y="110" width="216" height="100" rx="8" fill="#fff1f2" stroke="#be123c" stroke-width="2"/>
-  <text class="label primary card" x="132" y="154">RL Post-Training</text>
+  <rect x="20" y="110" width="204" height="100" rx="8" fill="#fff1f2" stroke="#be123c" stroke-width="2"/>
+  <text class="label primary card" x="122" y="154">RL Post-Training</text>
 
-  <rect x="258" y="110" width="216" height="100" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
-  <text class="label primary card" x="366" y="144">Test-Time Policy</text>
-  <text class="label primary card" x="366" y="166">Steering</text>
+  <rect x="251" y="110" width="204" height="100" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text class="label primary card" x="353" y="144">Test-Time Policy</text>
+  <text class="label primary card" x="353" y="166">Steering</text>
 
-  <rect x="492" y="110" width="216" height="100" rx="8" fill="#f0fdf4" stroke="#15803d" stroke-width="2"/>
-  <text class="label primary card" x="600" y="133">Test-Time Adaptation</text>
-  <text class="label primary card" x="600" y="155">and Training</text>
-  <text class="label secondary" x="600" y="181">(TTA &amp; TTT)</text>
+  <rect x="482" y="110" width="204" height="100" rx="8" fill="#f0fdf4" stroke="#15803d" stroke-width="2"/>
+  <text class="label primary card" x="584" y="133">Test-Time Adaptation</text>
+  <text class="label primary card" x="584" y="155">and Training</text>
+  <text class="label secondary" x="584" y="181">(TTA &amp; TTT)</text>
 
-  <rect x="726" y="110" width="216" height="100" rx="8" fill="#ecfeff" stroke="#0f766e" stroke-width="2"/>
-  <text class="label primary card" x="834" y="144">In-Context Learning</text>
-  <text class="label primary card" x="834" y="166">and Prompting</text>
+  <rect x="714" y="110" width="204" height="100" rx="8" fill="#ecfeff" stroke="#0f766e" stroke-width="2"/>
+  <text class="label primary card" x="816" y="144">In-Context Learning</text>
+  <text class="label primary card" x="816" y="166">and Prompting</text>
 
-  <rect x="960" y="110" width="216" height="100" rx="8" fill="#fffbeb" stroke="#b45309" stroke-width="2"/>
-  <text class="label primary card" x="1068" y="144">Scaling</text>
-  <text class="label primary card" x="1068" y="166">Verification</text>
+  <rect x="945" y="110" width="204" height="100" rx="8" fill="#fffbeb" stroke="#b45309" stroke-width="2"/>
+  <text class="label primary card" x="1047" y="154">Test-Time Scaling</text>
+
+  <rect x="1176" y="110" width="204" height="100" rx="8" fill="#faf5ff" stroke="#7e22ce" stroke-width="2"/>
+  <text class="label primary card" x="1278" y="144">Policy</text>
+  <text class="label primary card" x="1278" y="166">Self-Improvement</text>
 </svg>

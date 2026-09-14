@@ -9,11 +9,12 @@ body:
     attributes:
       label: Primary line of work
       options:
-        - RL Post-Training and Adaptation
+        - RL Post-Training
         - Test-Time Policy Steering
-        - Test-Time Training
+        - Test-Time Adaptation and Training (TTA & TTT)
         - In-Context Learning and Prompting
-        - Scaling Verification
+        - Test-Time Scaling
+        - Policy Self-Improvement
     validations:
       required: true
   - type: input

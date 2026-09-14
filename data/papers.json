@@ -626,13 +626,78 @@
       ]
     },
     {
-      "id": "scaling-verification",
-      "title": "Scaling Verification",
-      "description": "Verification methods spend additional test-time compute to diversify instructions or action candidates and then select among them with a learned or model-based verifier. They separate generating candidate behavior from judging whether it matches the task.",
-      "changes": "The number and diversity of candidate prompts or action chunks, plus the verifier used to rank them.",
-      "strength": "It can improve a frozen policy without parameter updates when successful behavior is present but sampled too rarely or selected poorly.",
-      "limitation": "Performance is bounded jointly by candidate coverage, verifier calibration, and the latency budget available for repeated generation.",
+      "id": "test-time-scaling",
+      "title": "Test-Time Scaling",
+      "description": "These methods allocate additional inference compute to reason, sample, search, predict outcomes, refine actions, or verify candidates before execution. Verification is one mechanism within this broader line rather than a separate category.",
+      "changes": "Reasoning depth, candidate count, search depth, world-model rollouts, refinement steps, verifier calls, or an adaptively allocated inference budget.",
+      "strength": "Can improve a fixed policy at deployment and expose a measurable compute-performance trade-off without collecting new demonstrations.",
+      "limitation": "More computation helps only when reasoning, candidate diversity, predictive models, or selection scores contain useful signal; latency and hardware cost increase with the budget.",
       "papers": [
+        {
+          "date": "2024-07-11",
+          "title": "Robotic Control via Embodied Chain-of-Thought Reasoning",
+          "venue": "CoRL 2024",
+          "paper": "https://arxiv.org/abs/2407.08693",
+          "project": "https://embodied-cot.github.io/",
+          "code": "https://github.com/MichalZawalski/embodied-CoT",
+          "tags": [
+            "VLA",
+            "Embodied Chain-of-Thought",
+            "Grounded Reasoning",
+            "Intermediate Computation"
+          ]
+        },
+        {
+          "date": "2025-06-21",
+          "title": "RoboMonkey: Scaling Test-Time Sampling and Verification for Vision-Language-Action Models",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2506.17811",
+          "project": "https://robomonkey-vla.github.io/",
+          "tags": [
+            "VLA",
+            "Test-Time Sampling",
+            "Action Verification",
+            "Inference Scaling Law"
+          ]
+        },
+        {
+          "date": "2025-10-07",
+          "title": "Verifier-free Test-Time Sampling for Vision-Language-Action Models",
+          "venue": "ICLR 2026",
+          "paper": "https://arxiv.org/abs/2510.05681",
+          "project": "https://suhyeok-jang.github.io/mg-select/",
+          "code": "https://github.com/suhyeok-jang/mg-select",
+          "tags": [
+            "VLA",
+            "Verifier-Free Selection",
+            "Condition Masking",
+            "Best-of-N"
+          ]
+        },
+        {
+          "date": "2025-10-13",
+          "title": "RoVer: Robot Reward Model as Test-Time Verifier for Vision-Language-Action Model",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2510.10975",
+          "tags": [
+            "VLA",
+            "Process Reward Model",
+            "Candidate Refinement",
+            "Test-Time Verification"
+          ]
+        },
+        {
+          "date": "2025-12-02",
+          "title": "Steering Vision-Language-Action Models as Anti-Exploration: A Test-Time Scaling Approach",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2512.02834",
+          "tags": [
+            "VLA",
+            "Flow Matching",
+            "Pseudo-Count Verifier",
+            "Best-of-N"
+          ]
+        },
         {
           "date": "2026-02-12",
           "title": "Scaling Verification Can Be More Effective than Scaling Policy Learning for Vision-Language-Action Alignment",
@@ -646,6 +711,19 @@
           ]
         },
         {
+          "date": "2026-05-31",
+          "title": "τ0-WM: A Unified Video-Action World Model for Robotic Manipulation",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2606.01027",
+          "project": "https://tau0-wm.github.io/",
+          "tags": [
+            "World Model",
+            "Adaptive Test-Time Compute",
+            "Imagined Rollouts",
+            "Action Rectification"
+          ]
+        },
+        {
           "date": "2026-08-17",
           "title": "τ0-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation",
           "venue": "arXiv",
@@ -656,6 +734,107 @@
             "World Model",
             "Test-Time Compute",
             "Subtask Verification"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "policy-self-improvement",
+      "title": "Policy Self-Improvement",
+      "description": "These methods use deployment rollouts, failures, corrections, or model-generated experience to improve future behavior across successive data-collection and update rounds.",
+      "changes": "The base policy, residual policy, critic, world model, recovery behavior, or data-generation loop between deployment iterations.",
+      "strength": "Turns autonomous experience and intervention data into better future behavior, reducing dependence on repeated full demonstrations.",
+      "limitation": "Requires reliable rewards or success labels, safe data collection, practical resets, and controls against policy drift or errors in model-generated data.",
+      "papers": [
+        {
+          "date": "2023-06-20",
+          "title": "RoboCat: A Self-Improving Generalist Agent for Robotic Manipulation",
+          "venue": "TMLR 2024",
+          "paper": "https://arxiv.org/abs/2306.11706",
+          "tags": [
+            "Generalist Policy",
+            "Self-Generated Data",
+            "Iterative Training",
+            "Multi-Embodiment"
+          ]
+        },
+        {
+          "date": "2025-09-09",
+          "title": "RaC: Robot Learning for Long-Horizon Tasks by Scaling Recovery and Correction",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2509.07953",
+          "project": "https://rac-scaling-robot.github.io/",
+          "tags": [
+            "Long-Horizon Manipulation",
+            "Human Intervention",
+            "Recovery Data",
+            "Iterative Imitation Learning"
+          ]
+        },
+        {
+          "date": "2025-10-30",
+          "title": "Self-Improving Vision-Language-Action Models with Data Generation via Residual RL",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2511.00091",
+          "project": "https://wenlixiao.com/self-improve-VLA-PLD",
+          "tags": [
+            "VLA",
+            "Residual RL",
+            "Deployment-Aligned Data",
+            "Policy Distillation"
+          ]
+        },
+        {
+          "date": "2026-02-12",
+          "title": "VLAW: Iterative Co-Improvement of Vision-Language-Action Policy and World Model",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2602.12063",
+          "project": "https://sites.google.com/view/vlaw-arxiv",
+          "tags": [
+            "VLA",
+            "World Model",
+            "Synthetic Rollouts",
+            "Iterative Co-Improvement"
+          ]
+        },
+        {
+          "date": "2026-03-17",
+          "title": "DreamPlan: Efficient Reinforcement Fine-Tuning of Vision-Language Planners via Video World Models",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2603.16860",
+          "project": "https://psi-lab.ai/DreamPlan/",
+          "tags": [
+            "Vision-Language Planner",
+            "Video World Model",
+            "Synthetic Rollouts",
+            "Reinforcement Fine-Tuning"
+          ]
+        },
+        {
+          "date": "2026-05-06",
+          "title": "When Life Gives You BC, Make Q-functions: Extracting Q-values from Behavior Cloning for On-Robot Reinforcement Learning",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2605.05172",
+          "project": "https://q2rl.rai-inst.com/",
+          "tags": [
+            "Offline-to-Online RL",
+            "Q-Estimation",
+            "Q-Gating",
+            "On-Robot Learning"
+          ]
+        },
+        {
+          "date": "2026-08-21",
+          "title": "Beyond Imitation: Self-Improving Robot Policies via Off-Policy Q-Planning",
+          "venue": "CoRL 2026",
+          "paper": "https://arxiv.org/abs/2608.21204",
+          "project": "https://q-planning.github.io/",
+          "code": "https://github.com/varungiridhar/qplanning-code",
+          "tags": [
+            "Frozen BC Policy",
+            "Off-Policy Q-Learning",
+            "Failure Rollouts",
+            "Value-Guided Planning"
           ]
         }
       ]

@@ -13,12 +13,12 @@ A paper belongs here when it changes deployment context; action sampling, guidan
 
 ## 🗺️ Research Map
 
-![Research map of the five test-time robot learning lines](assets/research-map.svg)
+![Research map of the six test-time robot learning lines](assets/research-map.svg)
 
-The five lines are organized by their primary deployment-time mechanism and supervision source. Hybrid methods are expected; each paper is assigned to the line that best captures its central contribution.
+The six lines are organized by their primary deployment-time mechanism and supervision source. Hybrid methods are expected; each paper is assigned to the line that best captures its central contribution.
 
 <details>
-<summary><strong>Compare the five lines</strong></summary>
+<summary><strong>Compare the six lines</strong></summary>
 
 | Line | Core mechanism | Deployment signal | Expected effect | Main limitation |
 | --- | --- | --- | --- | --- |
@@ -26,7 +26,8 @@ The five lines are organized by their primary deployment-time mechanism and supe
 | Test-Time Policy Steering | Guides sampling, denoising, flow, or action selection at execution | Value functions, VLM rewards, dynamics, constraints | Improves action generation or selection for the current setting | Candidate coverage, guidance quality, and inference latency |
 | Test-Time Adaptation and Training (TTA & TTT) | Adapts restricted parameters, state, or representations from deployment data | Self-supervised losses, feedback, predictive objectives, trajectory history | Responds to distribution shift, temporal context, or model mismatch | Objective alignment, stability, and forgetting |
 | In-Context Learning and Prompting | Conditions a policy on demonstrations, video, language, or sensorimotor context | Prompt examples supplied at deployment | Uses demonstrations and instructions without a gradient update | Requires a policy trained to interpret the prompt modality |
-| Scaling Verification | Samples broadly and verifies candidate actions or instructions | Alignment, value, consistency, or success scores | Recovers better behavior through candidate generation and selection | Correct behavior must be sampled; the verifier must be reliable |
+| Test-Time Scaling | Allocates more inference compute to reasoning, sampling, search, prediction, refinement, or verification | Internal confidence, value, predicted outcomes, self-consistency, or reasoning traces | Improves decisions within the current inference call without collecting new demonstrations | Gains depend on useful candidate diversity or reasoning; latency grows with compute |
+| Policy Self-Improvement | Repeats deployment data collection and model updates | Rollouts, failures, corrections, rewards, or model-generated experience | Improves behavior across deployment iterations | Requires safe collection, reliable feedback, resets, and control of policy or model drift |
 
 </details>
 
@@ -36,7 +37,8 @@ The five lines are organized by their primary deployment-time mechanism and supe
 - [🧭 Test-Time Policy Steering](#2-test-time-policy-steering)
 - [🧠 Test-Time Adaptation and Training (TTA & TTT)](#3-test-time-adaptation-and-training)
 - [🎬 In-Context Learning and Prompting](#4-in-context-learning-and-prompting)
-- [✅ Scaling Verification](#5-scaling-verification)
+- [📈 Test-Time Scaling](#5-test-time-scaling)
+- [🔄 Policy Self-Improvement](#6-policy-self-improvement)
 - [🤝 Contributing](#contributing)
 
 Papers are sorted by their first public release date, from oldest to newest. Venue denotes the latest known publication venue; otherwise it is listed as `arXiv`.
@@ -154,23 +156,52 @@ These methods use demonstrations, videos, language, or sensorimotor trajectories
 | 2026-08-19 | [GEN-1.5: Embodied Foundation Models are One-Shot Learners](https://generalistai.com/blog/gen-1.5) | `Generalist AI Blog` | - | Physical Prompting, Continuous Pretraining, Long Context, Few-Step Adaptation |
 | 2026-08-26 | [RA-VLA: Retrieval-Augmented VLA for Test-Time Adaptation](https://arxiv.org/abs/2608.25585) | `arXiv` | - | VLA, In-Context Imitation, Behavior-Aligned Retrieval, Flow Matching |
 
-<a id="5-scaling-verification"></a>
-## 5. ✅ Scaling Verification
+<a id="5-test-time-scaling"></a>
+## 5. 📈 Test-Time Scaling
 
-Verification methods spend additional test-time compute to diversify instructions or action candidates and then select among them with a learned or model-based verifier. They separate generating candidate behavior from judging whether it matches the task.
+These methods allocate additional inference compute to reason, sample, search, predict outcomes, refine actions, or verify candidates before execution. Verification is one mechanism within this broader line rather than a separate category.
 
-**Typical mechanism:** The number and diversity of candidate prompts or action chunks, plus the verifier used to rank them.
+**Typical mechanism:** Reasoning depth, candidate count, search depth, world-model rollouts, refinement steps, verifier calls, or an adaptively allocated inference budget.
 
-**Core advantage:** It can improve a frozen policy without parameter updates when successful behavior is present but sampled too rarely or selected poorly.
+**Core advantage:** Can improve a fixed policy at deployment and expose a measurable compute-performance trade-off without collecting new demonstrations.
 
-**Main limitation:** Performance is bounded jointly by candidate coverage, verifier calibration, and the latency budget available for repeated generation.
+**Main limitation:** More computation helps only when reasoning, candidate diversity, predictive models, or selection scores contain useful signal; latency and hardware cost increase with the budget.
 
-**Papers (2)**
+**Papers (8)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
+| 2024-07-11 | [Robotic Control via Embodied Chain-of-Thought Reasoning](https://arxiv.org/abs/2407.08693) | `CoRL 2024` | [Project](https://embodied-cot.github.io/) / [Code](https://github.com/MichalZawalski/embodied-CoT) | VLA, Embodied Chain-of-Thought, Grounded Reasoning, Intermediate Computation |
+| 2025-06-21 | [RoboMonkey: Scaling Test-Time Sampling and Verification for Vision-Language-Action Models](https://arxiv.org/abs/2506.17811) | `arXiv` | [Project](https://robomonkey-vla.github.io/) | VLA, Test-Time Sampling, Action Verification, Inference Scaling Law |
+| 2025-10-07 | [Verifier-free Test-Time Sampling for Vision-Language-Action Models](https://arxiv.org/abs/2510.05681) | `ICLR 2026` | [Project](https://suhyeok-jang.github.io/mg-select/) / [Code](https://github.com/suhyeok-jang/mg-select) | VLA, Verifier-Free Selection, Condition Masking, Best-of-N |
+| 2025-10-13 | [RoVer: Robot Reward Model as Test-Time Verifier for Vision-Language-Action Model](https://arxiv.org/abs/2510.10975) | `arXiv` | - | VLA, Process Reward Model, Candidate Refinement, Test-Time Verification |
+| 2025-12-02 | [Steering Vision-Language-Action Models as Anti-Exploration: A Test-Time Scaling Approach](https://arxiv.org/abs/2512.02834) | `arXiv` | - | VLA, Flow Matching, Pseudo-Count Verifier, Best-of-N |
 | 2026-02-12 | [Scaling Verification Can Be More Effective than Scaling Policy Learning for Vision-Language-Action Alignment](https://arxiv.org/abs/2602.12281) | `arXiv` | - | Test-Time Scaling, Action Verification, VLA Alignment, Best-of-N |
+| 2026-05-31 | [τ0-WM: A Unified Video-Action World Model for Robotic Manipulation](https://arxiv.org/abs/2606.01027) | `arXiv` | [Project](https://tau0-wm.github.io/) | World Model, Adaptive Test-Time Compute, Imagined Rollouts, Action Rectification |
 | 2026-08-17 | [τ0-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation](https://arxiv.org/abs/2608.16885) | `arXiv` | [Project](https://tau0-vla.github.io/) | Hierarchical VLA, World Model, Test-Time Compute, Subtask Verification |
+
+<a id="6-policy-self-improvement"></a>
+## 6. 🔄 Policy Self-Improvement
+
+These methods use deployment rollouts, failures, corrections, or model-generated experience to improve future behavior across successive data-collection and update rounds.
+
+**Typical mechanism:** The base policy, residual policy, critic, world model, recovery behavior, or data-generation loop between deployment iterations.
+
+**Core advantage:** Turns autonomous experience and intervention data into better future behavior, reducing dependence on repeated full demonstrations.
+
+**Main limitation:** Requires reliable rewards or success labels, safe data collection, practical resets, and controls against policy drift or errors in model-generated data.
+
+**Papers (7)**
+
+| Date | Paper | Venue | Resources | Tags |
+| --- | --- | --- | --- | --- |
+| 2023-06-20 | [RoboCat: A Self-Improving Generalist Agent for Robotic Manipulation](https://arxiv.org/abs/2306.11706) | `TMLR 2024` | - | Generalist Policy, Self-Generated Data, Iterative Training, Multi-Embodiment |
+| 2025-09-09 | [RaC: Robot Learning for Long-Horizon Tasks by Scaling Recovery and Correction](https://arxiv.org/abs/2509.07953) | `arXiv` | [Project](https://rac-scaling-robot.github.io/) | Long-Horizon Manipulation, Human Intervention, Recovery Data, Iterative Imitation Learning |
+| 2025-10-30 | [Self-Improving Vision-Language-Action Models with Data Generation via Residual RL](https://arxiv.org/abs/2511.00091) | `arXiv` | [Project](https://wenlixiao.com/self-improve-VLA-PLD) | VLA, Residual RL, Deployment-Aligned Data, Policy Distillation |
+| 2026-02-12 | [VLAW: Iterative Co-Improvement of Vision-Language-Action Policy and World Model](https://arxiv.org/abs/2602.12063) | `arXiv` | [Project](https://sites.google.com/view/vlaw-arxiv) | VLA, World Model, Synthetic Rollouts, Iterative Co-Improvement |
+| 2026-03-17 | [DreamPlan: Efficient Reinforcement Fine-Tuning of Vision-Language Planners via Video World Models](https://arxiv.org/abs/2603.16860) | `arXiv` | [Project](https://psi-lab.ai/DreamPlan/) | Vision-Language Planner, Video World Model, Synthetic Rollouts, Reinforcement Fine-Tuning |
+| 2026-05-06 | [When Life Gives You BC, Make Q-functions: Extracting Q-values from Behavior Cloning for On-Robot Reinforcement Learning](https://arxiv.org/abs/2605.05172) | `arXiv` | [Project](https://q2rl.rai-inst.com/) | Offline-to-Online RL, Q-Estimation, Q-Gating, On-Robot Learning |
+| 2026-08-21 | [Beyond Imitation: Self-Improving Robot Policies via Off-Policy Q-Planning](https://arxiv.org/abs/2608.21204) | `CoRL 2026` | [Project](https://q-planning.github.io/) / [Code](https://github.com/varungiridhar/qplanning-code) | Frozen BC Policy, Off-Policy Q-Learning, Failure Rollouts, Value-Guided Planning |
 <!-- GENERATED_PAPER_LISTS_END -->
 
 <a id="contributing"></a>

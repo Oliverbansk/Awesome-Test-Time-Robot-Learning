@@ -19,7 +19,8 @@ LINE_EMOJIS = {
     "test-time-policy-steering": "🧭",
     "test-time-adaptation-and-training": "🧠",
     "in-context-learning-and-prompting": "🎬",
-    "scaling-verification": "✅",
+    "test-time-scaling": "📈",
+    "policy-self-improvement": "🔄",
 }
 
 

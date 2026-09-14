@@ -13,11 +13,12 @@ A submission should:
 
 The list is mechanism-first. Choose the line that captures the paper's primary deployment-time intervention:
 
-- `rl-post-training-and-adaptation`
+- `rl-post-training`
 - `test-time-policy-steering`
-- `test-time-training`
+- `test-time-adaptation-and-training`
 - `in-context-learning-and-prompting`
-- `scaling-verification`
+- `test-time-scaling`
+- `policy-self-improvement`
 
 Use tags to record important secondary mechanisms rather than duplicating a paper across lines.
 
