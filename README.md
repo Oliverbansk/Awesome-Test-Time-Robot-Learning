@@ -111,7 +111,7 @@ These methods adapt a policy, representation, or temporal state from deployment 
 
 **Main limitation:** The deployment objective or feedback signal may not track task success, and continual updates can drift, forget, or destabilize control.
 
-**Papers (9)**
+**Papers (11)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
@@ -120,6 +120,8 @@ These methods adapt a policy, representation, or temporal state from deployment 
 | 2023-07-03 | [MoVie: Visual Model-Based Policy Adaptation for View Generalization](https://arxiv.org/abs/2307.00972) | `NeurIPS 2023` | - | Test-Time Adaptation, View Generalization, Model-Based RL, Forward Dynamics |
 | 2023-11-22 | [Fast-Slow Test-Time Adaptation for Online Vision-and-Language Navigation](https://arxiv.org/abs/2311.13209) | `ICML 2024` | - | Test-Time Adaptation, Vision-Language Navigation, Entropy Minimization, Online Adaptation |
 | 2023-12-24 | [ManipLLM: Embodied Multimodal Large Language Model for Object-Centric Robotic Manipulation](https://arxiv.org/abs/2312.16217) | `CVPR 2024` | - | Test-Time Adaptation, Robot Manipulation, Multimodal LLM, Affordance |
+| 2024-02-04 | [Fast Peer Adaptation with Context-aware Exploration](https://arxiv.org/abs/2402.02468) | `ICML 2024` | [Project](https://sites.google.com/view/peer-adaptation) | Online Adaptation, Context-Aware Policy, Multi-Episode History, Active Exploration |
+| 2025-05-28 | [Communication-Efficient Desire Alignment for Proactive Embodied Human–Agent Interaction](https://arxiv.org/abs/2505.22503) | `ACL 2026 (Main, Oral)` | - | Embodied Human–Agent Interaction, Online Desire Adaptation, Reflection-Based Communication, Persistent Memory |
 | 2025-07-13 | [Test-Time Adaptation for Online Vision-Language Navigation with Feedback-based Reinforcement Learning](https://proceedings.mlr.press/v267/kim25ad.html) | `ICML 2025` | - | Test-Time Adaptation, Vision-Language Navigation, Feedback-Based RL, REINFORCE |
 | 2026-07-01 | [FAR: Failure-Aware Retry for Test-Time Recovery and Continual Policy Improvement](https://arxiv.org/abs/2607.01111) | `CoRL 2026` | - | Failure Recovery, Preference Adaptation, Continual Policy Improvement, Action Perturbation |
 | 2026-07-08 | [WAM-TTT: Steering World-Action Models by Watching Human Play at Test Time](https://arxiv.org/abs/2607.06988) | `arXiv` | - | World-Action Model, Human Video, Fast Weights, Test-Time Training |
@@ -136,7 +138,7 @@ These methods use demonstrations, videos, language, or sensorimotor trajectories
 
 **Main limitation:** The policy must be trained to read the prompt modality, and reliable prompting does not guarantee the required low-level behavior is in the policy's learned repertoire.
 
-**Papers (17)**
+**Papers (20)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
@@ -149,8 +151,11 @@ These methods use demonstrations, videos, language, or sensorimotor trajectories
 | 2024-08-28 | [In-Context Imitation Learning via Next-Token Prediction (ICRT)](https://arxiv.org/abs/2408.15980) | `ICRA 2025` | - | Sensorimotor Prompt, Next-Token Prediction, Transformer, In-Context Learning |
 | 2024-11-19 | [Instant Policy: In-Context Imitation Learning via Graph Diffusion](https://arxiv.org/abs/2411.12633) | `ICLR 2025` | - | Graph Diffusion, One-Shot Imitation, 3D Representation, Pseudo-Demonstrations |
 | 2025-05-27 | [Learning Generalizable Robot Policy with Human Demonstration Video as a Prompt](https://arxiv.org/abs/2505.20795) | `ICRA 2026` | - | Human Video Prompt, Cross-Embodiment, In-Context Learning |
+| 2025-05-27 | [Hierarchical Instruction-aware Embodied Visual Tracking](https://arxiv.org/abs/2505.20710) | `FCS 2026` | [Project](https://sites.google.com/view/hievt) | Language-Conditioned Policy, LLM Spatial Reasoning, RAG Goal Correction, Embodied Visual Tracking |
+| 2025-05-28 | [Behavior-agnostic Task Inference for Robust Offline In-context Reinforcement Learning](https://openreview.net/pdf?id=jMKaATBEKb) | `ICML 2025` | [Project](https://sites.google.com/view/bati-icrl) | Offline In-Context RL, Task Inference, Context Trajectories, Distribution Shift |
 | 2025-06-18 | [Robust Instant Policy: Leveraging Student's t-Regression Model for Robust In-context Imitation Learning of Robot Manipulation](https://arxiv.org/abs/2506.15157) | `IROS 2025` | [Project](https://sites.google.com/view/robustinstantpolicy) | In-Context Imitation, Trajectory Aggregation, Uncertainty, Real Robot |
 | 2025-12-08 | [See Once, Then Act: VLA Task Learning from One-Shot Video Demonstrations (ViVLA)](https://arxiv.org/abs/2512.07582) | `arXiv` | - | Human Video Prompt, Cross-Embodiment, Latent Action, VLA |
+| 2026-04-22 | [AdaTracker: Learning Adaptive In-Context Policy for Cross-Embodiment Active Visual Tracking](https://arxiv.org/abs/2604.20305) | `RA-L 2026` | - | Cross-Embodiment, Active Visual Tracking, In-Context Policy, Zero-Shot Adaptation |
 | 2026-06-02 | [Instant-Fold: In-Context Imitation Learning for Deformable Object Manipulation](https://arxiv.org/abs/2606.04269) | `CoRL 2026` | - | Deformable Manipulation, Human Demonstration, Flow Matching, 3D Tokens |
 | 2026-06-06 | [SynthICL: Scalable In-context Imitation Learning with Synthetic Data](https://arxiv.org/abs/2606.08154) | `CoRL 2026` | [Project](https://synth-icl.github.io/) | Synthetic Data, RGB-Only, Flow Matching, One-Shot Imitation |
 | 2026-06-29 | [Behavior Prompting Policy: Demonstrations as Prompts for Manipulation](https://arxiv.org/abs/2606.30457) | `CoRL 2026` | [Project](https://behavior-prompting.github.io/) | Sensorimotor Prompt, Robot Demonstration, Behavior Prompting |
@@ -193,11 +198,12 @@ These methods use deployment rollouts, failures, corrections, or model-generated
 
 **Main limitation:** Requires reliable rewards or success labels, safe data collection, practical resets, and controls against policy drift or errors in model-generated data.
 
-**Papers (7)**
+**Papers (8)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
 | 2023-06-20 | [RoboCat: A Self-Improving Generalist Agent for Robotic Manipulation](https://arxiv.org/abs/2306.11706) | `TMLR 2024` | - | Generalist Policy, Self-Generated Data, Iterative Training, Multi-Embodiment |
+| 2025-05-28 | [VLM Can Be a Good Assistant: Enhancing Embodied Visual Tracking with Self-Improving Vision-Language Models](https://arxiv.org/abs/2505.20718) | `IROS 2025` | [Project](https://sites.google.com/view/evt-recovery-assistant) | Embodied Visual Tracking, Failure Recovery, Memory-Augmented Self-Reflection, Iterative Recovery Improvement |
 | 2025-09-09 | [RaC: Robot Learning for Long-Horizon Tasks by Scaling Recovery and Correction](https://arxiv.org/abs/2509.07953) | `arXiv` | [Project](https://rac-scaling-robot.github.io/) | Long-Horizon Manipulation, Human Intervention, Recovery Data, Iterative Imitation Learning |
 | 2025-10-30 | [Self-Improving Vision-Language-Action Models with Data Generation via Residual RL](https://arxiv.org/abs/2511.00091) | `ICLR 2026` | [Project](https://wenlixiao.com/self-improve-VLA-PLD) | VLA, Residual RL, Deployment-Aligned Data, Policy Distillation |
 | 2026-02-12 | [VLAW: Iterative Co-Improvement of Vision-Language-Action Policy and World Model](https://arxiv.org/abs/2602.12063) | `arXiv` | [Project](https://sites.google.com/view/vlaw-arxiv) | VLA, World Model, Synthetic Rollouts, Iterative Co-Improvement |
