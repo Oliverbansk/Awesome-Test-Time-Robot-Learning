@@ -381,6 +381,31 @@
           ]
         },
         {
+          "date": "2024-02-04",
+          "title": "Fast Peer Adaptation with Context-aware Exploration",
+          "venue": "ICML 2024",
+          "paper": "https://arxiv.org/abs/2402.02468",
+          "project": "https://sites.google.com/view/peer-adaptation",
+          "tags": [
+            "Online Adaptation",
+            "Context-Aware Policy",
+            "Multi-Episode History",
+            "Active Exploration"
+          ]
+        },
+        {
+          "date": "2025-05-28",
+          "title": "Communication-Efficient Desire Alignment for Proactive Embodied Human–Agent Interaction",
+          "venue": "ACL 2026 (Main, Oral)",
+          "paper": "https://arxiv.org/abs/2505.22503",
+          "tags": [
+            "Embodied Human–Agent Interaction",
+            "Online Desire Adaptation",
+            "Reflection-Based Communication",
+            "Persistent Memory"
+          ]
+        },
+        {
           "date": "2025-07-13",
           "title": "Test-Time Adaptation for Online Vision-Language Navigation with Feedback-based Reinforcement Learning",
           "venue": "ICML 2025",
@@ -550,6 +575,32 @@
           ]
         },
         {
+          "date": "2025-05-27",
+          "title": "Hierarchical Instruction-aware Embodied Visual Tracking",
+          "venue": "FCS 2026",
+          "paper": "https://arxiv.org/abs/2505.20710",
+          "project": "https://sites.google.com/view/hievt",
+          "tags": [
+            "Language-Conditioned Policy",
+            "LLM Spatial Reasoning",
+            "RAG Goal Correction",
+            "Embodied Visual Tracking"
+          ]
+        },
+        {
+          "date": "2025-05-28",
+          "title": "Behavior-agnostic Task Inference for Robust Offline In-context Reinforcement Learning",
+          "venue": "ICML 2025",
+          "paper": "https://openreview.net/pdf?id=jMKaATBEKb",
+          "project": "https://sites.google.com/view/bati-icrl",
+          "tags": [
+            "Offline In-Context RL",
+            "Task Inference",
+            "Context Trajectories",
+            "Distribution Shift"
+          ]
+        },
+        {
           "date": "2025-06-18",
           "title": "Robust Instant Policy: Leveraging Student's t-Regression Model for Robust In-context Imitation Learning of Robot Manipulation",
           "venue": "IROS 2025",
@@ -572,6 +623,18 @@
             "Cross-Embodiment",
             "Latent Action",
             "VLA"
+          ]
+        },
+        {
+          "date": "2026-04-22",
+          "title": "AdaTracker: Learning Adaptive In-Context Policy for Cross-Embodiment Active Visual Tracking",
+          "venue": "RA-L 2026",
+          "paper": "https://arxiv.org/abs/2604.20305",
+          "tags": [
+            "Cross-Embodiment",
+            "Active Visual Tracking",
+            "In-Context Policy",
+            "Zero-Shot Adaptation"
           ]
         },
         {
@@ -780,6 +843,19 @@
             "Self-Generated Data",
             "Iterative Training",
             "Multi-Embodiment"
+          ]
+        },
+        {
+          "date": "2025-05-28",
+          "title": "VLM Can Be a Good Assistant: Enhancing Embodied Visual Tracking with Self-Improving Vision-Language Models",
+          "venue": "IROS 2025",
+          "paper": "https://arxiv.org/abs/2505.20718",
+          "project": "https://sites.google.com/view/evt-recovery-assistant",
+          "tags": [
+            "Embodied Visual Tracking",
+            "Failure Recovery",
+            "Memory-Augmented Self-Reflection",
+            "Iterative Recovery Improvement"
           ]
         },
         {
