@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-09-14",
+  "last_updated": "2026-09-30",
   "lines": [
     {
       "id": "rl-post-training",
@@ -307,6 +307,30 @@
             "Flow Matching",
             "Q-Guidance",
             "Real Robot"
+          ]
+        },
+        {
+          "date": "2026-09-08",
+          "title": "Proxy Policy Steering",
+          "venue": "CoRL 2026",
+          "paper": "https://arxiv.org/abs/2609.09148",
+          "tags": [
+            "Proxy Policies",
+            "Velocity-Space Guidance",
+            "Flow Matching",
+            "Frozen Policy"
+          ]
+        },
+        {
+          "date": "2026-09-18",
+          "title": "Latent Policy Steering: An Efficient and Flexible Framework for Cross-Embodiment Transfer",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2609.22521",
+          "tags": [
+            "Cross-Embodiment",
+            "World Model",
+            "Latent-Space Search",
+            "Frozen Policy"
           ]
         }
       ]

@@ -85,7 +85,7 @@ These methods keep the base policy frozen and intervene in its action-generation
 
 **Main limitation:** It usually cannot repair missing support; guidance quality, repeated sampling, and external models can also add substantial latency.
 
-**Papers (10)**
+**Papers (12)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
@@ -99,6 +99,8 @@ These methods keep the base policy frozen and intervene in its action-generation
 | 2026-06-09 | [Test-Time Gradient Guidance of Flow Policies in Reinforcement Learning](https://arxiv.org/abs/2606.11087) | `arXiv` | [Code](https://github.com/zhouzypaul/qgf) | Flow Matching, Q-Guidance, Offline RL, Frozen Policy |
 | 2026-06-12 | [Improving Robotic Generalist Policies via Flow Reversal Steering](https://arxiv.org/abs/2606.13675) | `arXiv` | - | Flow Matching, Flow Inversion, VLM Guidance, Noise-Space Policy |
 | 2026-07-02 | [Guided Action Flow: Q-Guided Inference for Flow-Matching Vision-Language-Action Policies](https://arxiv.org/abs/2607.02092) | `arXiv` | - | VLA, Flow Matching, Q-Guidance, Real Robot |
+| 2026-09-08 | [Proxy Policy Steering](https://arxiv.org/abs/2609.09148) | `CoRL 2026` | - | Proxy Policies, Velocity-Space Guidance, Flow Matching, Frozen Policy |
+| 2026-09-18 | [Latent Policy Steering: An Efficient and Flexible Framework for Cross-Embodiment Transfer](https://arxiv.org/abs/2609.22521) | `arXiv` | - | Cross-Embodiment, World Model, Latent-Space Search, Frozen Policy |
 
 <a id="3-test-time-adaptation-and-training"></a>
 ## 3. 🧠 Test-Time Adaptation and Training (TTA & TTT)
