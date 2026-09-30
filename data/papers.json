@@ -60,6 +60,19 @@
           ]
         },
         {
+          "date": "2025-06-18",
+          "title": "Steering Your Diffusion Policy with Latent Space Reinforcement Learning",
+          "venue": "CoRL 2025",
+          "paper": "https://arxiv.org/abs/2506.15799",
+          "project": "https://diffusion-steering.github.io/",
+          "tags": [
+            "Diffusion Policy",
+            "Latent-Space RL",
+            "Black-Box Policy",
+            "Real-World RL"
+          ]
+        },
+        {
           "date": "2025-08-20",
           "title": "HIL-SERL: Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning",
           "venue": "Science Robotics",
@@ -759,6 +772,19 @@
           ]
         },
         {
+          "date": "2025-05-27",
+          "title": "Hume: Introducing System-2 Thinking in Visual-Language-Action Model",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2505.21432",
+          "project": "https://hume-vla.github.io/",
+          "tags": [
+            "VLA",
+            "Value-Guided Sampling",
+            "Best-of-N",
+            "Cascaded Denoising"
+          ]
+        },
+        {
           "date": "2025-06-21",
           "title": "RoboMonkey: Scaling Test-Time Sampling and Verification for Vision-Language-Action Models",
           "venue": "RSS 2025 OOD Workshop",
@@ -769,6 +795,31 @@
             "Test-Time Sampling",
             "Action Verification",
             "Inference Scaling Law"
+          ]
+        },
+        {
+          "date": "2025-08-17",
+          "title": "Improving Pre-Trained Vision-Language-Action Policies with Model-Based Search",
+          "venue": "CoRL 2025 Workshop",
+          "paper": "https://arxiv.org/abs/2508.12211",
+          "tags": [
+            "VLA",
+            "MCTS",
+            "Model-Based Search",
+            "Inference-Time Planning"
+          ]
+        },
+        {
+          "date": "2025-09-26",
+          "title": "VLA-Reasoner: Empowering Vision-Language-Action Models with Reasoning via Online Monte Carlo Tree Search",
+          "venue": "ICRA 2026",
+          "paper": "https://arxiv.org/abs/2509.22643",
+          "project": "https://vla-reasoner.github.io/",
+          "tags": [
+            "VLA",
+            "MCTS",
+            "World Model",
+            "Value-Guided Search"
           ]
         },
         {
@@ -819,6 +870,20 @@
             "Action Verification",
             "VLA Alignment",
             "Best-of-N"
+          ]
+        },
+        {
+          "date": "2026-04-21",
+          "title": "FASTER: Value-Guided Sampling for Fast RL",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2604.19730",
+          "project": "https://pd-perry.github.io/faster/",
+          "code": "https://github.com/alexanderswerdlow/faster",
+          "tags": [
+            "Diffusion Policy",
+            "Value-Guided Sampling",
+            "Early Candidate Filtering",
+            "Denoising MDP"
           ]
         },
         {

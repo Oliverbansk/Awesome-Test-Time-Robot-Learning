@@ -55,7 +55,7 @@ These methods use reinforcement learning after task-level post-training to impro
 
 **Main limitation:** Interaction cost, resets, safety, reward design, and stability of online optimization.
 
-**Papers (14)**
+**Papers (15)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
@@ -63,6 +63,7 @@ These methods use reinforcement learning after task-level post-training to impro
 | 2024-09-01 | [Diffusion Policy Policy Optimization (DPPO)](https://arxiv.org/abs/2409.00588) | `ICLR 2025` | - | Diffusion Policy, On-Policy RL, PPO |
 | 2024-12-18 | [Policy Decorator: Model-Agnostic Online Refinement for Large Policy Model](https://arxiv.org/abs/2412.13630) | `ICLR 2025` | [Project](https://policydecorator.github.io/) | Residual RL, Online Adaptation, SAC, Model-Agnostic |
 | 2025-05-24 | [VLA-RL: Towards Masterful and General Robotic Manipulation with Scalable Reinforcement Learning](https://arxiv.org/abs/2505.18719) | `arXiv` | - | VLA, Online RL, PPO, Process Reward |
+| 2025-06-18 | [Steering Your Diffusion Policy with Latent Space Reinforcement Learning](https://arxiv.org/abs/2506.15799) | `CoRL 2025` | [Project](https://diffusion-steering.github.io/) | Diffusion Policy, Latent-Space RL, Black-Box Policy, Real-World RL |
 | 2025-08-20 | [HIL-SERL: Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning](https://doi.org/10.1126/scirobotics.ads5033) | `Science Robotics` | - | Human-in-the-Loop RL, Real-World RL, Human Intervention |
 | 2025-09-18 | [Unified Latent Steering and Residual Refinement for Online Improvement of Diffusion Policy Models](https://openreview.net/forum?id=9sQVoVMeSD) | `ICML 2026 Workshop / CoRL 2026 Submission` | - | Diffusion Policy, Latent Steering, Residual RL, Online RL |
 | 2025-09-23 | [Residual Off-Policy RL for Finetuning Behavior Cloning Policies](https://arxiv.org/abs/2509.19301) | `ICLR 2026 Workshop` | - | Residual RL, Off-Policy RL, Behavior Cloning |
@@ -176,16 +177,20 @@ These methods allocate additional inference compute to reason, sample, search, p
 
 **Main limitation:** More computation helps only when reasoning, candidate diversity, predictive models, or selection scores contain useful signal; latency and hardware cost increase with the budget.
 
-**Papers (8)**
+**Papers (12)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
 | 2024-07-11 | [Robotic Control via Embodied Chain-of-Thought Reasoning](https://arxiv.org/abs/2407.08693) | `CoRL 2024` | [Project](https://embodied-cot.github.io/) / [Code](https://github.com/MichalZawalski/embodied-CoT) | VLA, Embodied Chain-of-Thought, Grounded Reasoning, Intermediate Computation |
+| 2025-05-27 | [Hume: Introducing System-2 Thinking in Visual-Language-Action Model](https://arxiv.org/abs/2505.21432) | `arXiv` | [Project](https://hume-vla.github.io/) | VLA, Value-Guided Sampling, Best-of-N, Cascaded Denoising |
 | 2025-06-21 | [RoboMonkey: Scaling Test-Time Sampling and Verification for Vision-Language-Action Models](https://arxiv.org/abs/2506.17811) | `RSS 2025 OOD Workshop` | [Project](https://robomonkey-vla.github.io/) | VLA, Test-Time Sampling, Action Verification, Inference Scaling Law |
+| 2025-08-17 | [Improving Pre-Trained Vision-Language-Action Policies with Model-Based Search](https://arxiv.org/abs/2508.12211) | `CoRL 2025 Workshop` | - | VLA, MCTS, Model-Based Search, Inference-Time Planning |
+| 2025-09-26 | [VLA-Reasoner: Empowering Vision-Language-Action Models with Reasoning via Online Monte Carlo Tree Search](https://arxiv.org/abs/2509.22643) | `ICRA 2026` | [Project](https://vla-reasoner.github.io/) | VLA, MCTS, World Model, Value-Guided Search |
 | 2025-10-07 | [Verifier-free Test-Time Sampling for Vision-Language-Action Models](https://arxiv.org/abs/2510.05681) | `ICLR 2026` | [Project](https://suhyeok-jang.github.io/mg-select/) / [Code](https://github.com/suhyeok-jang/mg-select) | VLA, Verifier-Free Selection, Condition Masking, Best-of-N |
 | 2025-10-13 | [RoVer: Robot Reward Model as Test-Time Verifier for Vision-Language-Action Model](https://arxiv.org/abs/2510.10975) | `arXiv` | - | VLA, Process Reward Model, Candidate Refinement, Test-Time Verification |
 | 2025-12-02 | [Steering Vision-Language-Action Models as Anti-Exploration: A Test-Time Scaling Approach](https://arxiv.org/abs/2512.02834) | `arXiv` | - | VLA, Flow Matching, Pseudo-Count Verifier, Best-of-N |
 | 2026-02-12 | [Scaling Verification Can Be More Effective than Scaling Policy Learning for Vision-Language-Action Alignment](https://arxiv.org/abs/2602.12281) | `arXiv` | - | Test-Time Scaling, Action Verification, VLA Alignment, Best-of-N |
+| 2026-04-21 | [FASTER: Value-Guided Sampling for Fast RL](https://arxiv.org/abs/2604.19730) | `arXiv` | [Project](https://pd-perry.github.io/faster/) / [Code](https://github.com/alexanderswerdlow/faster) | Diffusion Policy, Value-Guided Sampling, Early Candidate Filtering, Denoising MDP |
 | 2026-05-31 | [τ0-WM: A Unified Video-Action World Model for Robotic Manipulation](https://arxiv.org/abs/2606.01027) | `arXiv` | [Project](https://tau0-wm.github.io/) | World Model, Adaptive Test-Time Compute, Imagined Rollouts, Action Rectification |
 | 2026-08-17 | [τ0-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation](https://arxiv.org/abs/2608.16885) | `arXiv` | [Project](https://tau0-vla.github.io/) | Hierarchical VLA, World Model, Test-Time Compute, Subtask Verification |
 
