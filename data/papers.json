@@ -311,6 +311,19 @@
           ]
         },
         {
+          "date": "2026-06-25",
+          "title": "Inference-Time Robot Behavior Steering through Physically-Aware Reconfiguration of Task-Structure",
+          "venue": "CoRL 2026",
+          "paper": "https://arxiv.org/abs/2606.26588",
+          "project": "https://pyywill.github.io/restruct-corl2026/",
+          "tags": [
+            "Frozen Policy",
+            "Temporal-Logic Constraints",
+            "Task-Structure Editing",
+            "Natural-Language Preferences"
+          ]
+        },
+        {
           "date": "2026-07-02",
           "title": "Guided Action Flow: Q-Guided Inference for Flow-Matching Vision-Language-Action Policies",
           "venue": "arXiv",
