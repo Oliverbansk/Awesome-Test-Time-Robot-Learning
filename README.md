@@ -55,7 +55,7 @@ These methods use reinforcement learning after task-level post-training to impro
 
 **Main limitation:** Interaction cost, resets, safety, reward design, and stability of online optimization.
 
-**Papers (15)**
+**Papers (17)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
@@ -73,7 +73,9 @@ These methods use reinforcement learning after task-level post-training to impro
 | 2026-05-12 | [TMRL: Diffusion Timestep-Modulated Pretraining Enables Exploration for Efficient Policy Finetuning](https://arxiv.org/abs/2605.12236) | `RSS 2026` | - | Diffusion Policy, Exploration, RL Fine-Tuning, Action Coverage |
 | 2026-05-19 | [Beyond Action Residuals: Real-World Robot Policy Steering via Bottleneck Latent Reinforcement Learning](https://arxiv.org/abs/2605.19919) | `arXiv` | [Project](https://manutdmoon.github.io/ZPRL/) | Latent-Space RL, Flow Matching, Real-World RL, Policy Adaptation |
 | 2026-06-30 | [Adapting Generalist Robot Policies with Semantic Reinforcement Learning](https://arxiv.org/abs/2606.31958) | `arXiv` | - | VLA, Semantic Actions, Real-World RL, Online Adaptation |
+| 2026-07-07 | [Optimal Transport Q-Learning for Flow Policy Steering and Acceleration](https://arxiv.org/abs/2607.06262) | `CoRL 2026` | [Project](https://ansocho.github.io/otql-flow/) | Advantage Weighting, Flow Matching, Online RL, Optimal Transport |
 | 2026-07-09 | [FlowDAgger: Human-in-the-Loop Adaptation of Generative Robot Policies in Latent Space](https://arxiv.org/abs/2607.08877) | `arXiv` | - | Human-in-the-Loop, DAgger, Generative Policy, Action Inversion |
+| 2026-10-19 | [PIVOT: Policy Improvement via Trust-Region Optimization from Deployment Experience](https://openreview.net/forum?id=2vx7I6aRPS) | `CoRL 2026` | - | Trust Region, Flow Matching, Deployment Rollouts, Bimanual Manipulation |
 
 <a id="2-test-time-policy-steering"></a>
 ## 2. 🧭 Test-Time Policy Steering
@@ -86,7 +88,7 @@ These methods keep the base policy frozen and intervene in its action-generation
 
 **Main limitation:** It usually cannot repair missing support; guidance quality, repeated sampling, and external models can also add substantial latency.
 
-**Papers (13)**
+**Papers (18)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
@@ -97,12 +99,17 @@ These methods keep the base policy frozen and intervene in its action-generation
 | 2026-02-03 | [VLS: Steering Pretrained Robot Policies via Vision-Language Models](https://arxiv.org/abs/2602.03973) | `arXiv` | - | VLM, Reward-Guided Denoising, Diffusion Policy, Flow Matching |
 | 2026-03-09 | [OmniGuide: Universal Guidance Fields for Enhancing Generalist Robot Policies](https://arxiv.org/abs/2603.10052) | `arXiv` | - | Guidance Field, VLA, Human Demonstrations, Flow Matching |
 | 2026-05-12 | [Retrieve-then-Steer](https://arxiv.org/abs/2605.10094) | `arXiv` | - | Retrieval, Test-Time Memory, Frozen Policy, Flow Policy |
+| 2026-06-08 | [Flow Control: Steering Vision-Language-Action Models with Simple Real-Time Inputs](https://arxiv.org/abs/2606.10180) | `CoRL 2026` | [Project](https://jcykao.github.io/flowcontrol/) | VLA, Flow Matching, Human Input, Inference-Time Steering |
 | 2026-06-09 | [Test-Time Gradient Guidance of Flow Policies in Reinforcement Learning](https://arxiv.org/abs/2606.11087) | `arXiv` | [Code](https://github.com/zhouzypaul/qgf) | Flow Matching, Q-Guidance, Offline RL, Frozen Policy |
+| 2026-06-10 | [Learning What to Say to Your VLA: Mostly Harmless Vision Language Action Model Steering](https://arxiv.org/abs/2606.12299) | `CoRL 2026` | - | VLA, Language Feedback, Conformal Calibration, Frozen Policy |
+| 2026-06-11 | [EmbodiSteer: Steering Embodiment-Agnostic Visuomotor Policies with Joint-Space Guidance for Zero-Shot Cross-Embodiment Deployment](https://arxiv.org/abs/2606.12965) | `CoRL 2026` | [Project](https://frankwang67.github.io/EmbodiSteer-Page) | Cross-Embodiment, Diffusion Guidance, Joint-Space Guidance, Collision Avoidance |
 | 2026-06-12 | [Improving Robotic Generalist Policies via Flow Reversal Steering](https://arxiv.org/abs/2606.13675) | `arXiv` | - | Flow Matching, Flow Inversion, VLM Guidance, Noise-Space Policy |
+| 2026-06-12 | [Inference-time Policy Steering via Vision and Touch](https://arxiv.org/abs/2606.14981) | `CoRL 2026` | - | Visuotactile Steering, World Model, Diffusion Editing, Contact-Rich Manipulation |
 | 2026-06-25 | [Inference-Time Robot Behavior Steering through Physically-Aware Reconfiguration of Task-Structure](https://arxiv.org/abs/2606.26588) | `CoRL 2026` | [Project](https://pyywill.github.io/restruct-corl2026/) | Frozen Policy, Temporal-Logic Constraints, Task-Structure Editing, Natural-Language Preferences |
 | 2026-07-02 | [Guided Action Flow: Q-Guided Inference for Flow-Matching Vision-Language-Action Policies](https://arxiv.org/abs/2607.02092) | `arXiv` | - | VLA, Flow Matching, Q-Guidance, Real Robot |
 | 2026-09-08 | [Proxy Policy Steering](https://arxiv.org/abs/2609.09148) | `CoRL 2026` | - | Proxy Policies, Velocity-Space Guidance, Flow Matching, Frozen Policy |
 | 2026-09-18 | [Latent Policy Steering: An Efficient and Flexible Framework for Cross-Embodiment Transfer](https://arxiv.org/abs/2609.22521) | `arXiv` | - | Cross-Embodiment, World Model, Latent-Space Search, Frozen Policy |
+| 2026-11-07 | [GUARD: Anomaly-Informed Q-Steering for Generative Robot Policies in Dexterous Manipulation](https://arxiv.org/abs/2611.10343) | `arXiv` | - | Q-Guidance, Anomaly Detection, Generative Policy, Dexterous Manipulation |
 
 <a id="3-test-time-adaptation-and-training"></a>
 ## 3. 🧠 Test-Time Adaptation and Training (TTA & TTT)
@@ -115,7 +122,7 @@ These methods adapt a policy, representation, or temporal state from deployment 
 
 **Main limitation:** The deployment objective or feedback signal may not track task success, and continual updates can drift, forget, or destabilize control.
 
-**Papers (11)**
+**Papers (12)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
@@ -130,6 +137,7 @@ These methods adapt a policy, representation, or temporal state from deployment 
 | 2026-07-01 | [FAR: Failure-Aware Retry for Test-Time Recovery and Continual Policy Improvement](https://arxiv.org/abs/2607.01111) | `CoRL 2026` | - | Failure Recovery, Preference Adaptation, Continual Policy Improvement, Action Perturbation |
 | 2026-07-08 | [WAM-TTT: Steering World-Action Models by Watching Human Play at Test Time](https://arxiv.org/abs/2607.06988) | `arXiv` | - | World-Action Model, Human Video, Fast Weights, Test-Time Training |
 | 2026-07-16 | [RoboTTT: Context Scaling for Robot Policies](https://arxiv.org/abs/2607.15275) | `arXiv` | - | Long Context, Fast Weights, VLA, Human Video |
+| 2026-09-28 | [Scouting the Dynamics Gap: Test-Time Policy Adaptation via Action-Outcome Feedback](https://arxiv.org/abs/2609.36107) | `CoRL 2026` | - | Dynamics Adaptation, Meta-Learning, Latent Belief, Action-Outcome Feedback |
 
 <a id="4-in-context-learning-and-prompting"></a>
 ## 4. 🎬 In-Context Learning and Prompting
@@ -142,7 +150,7 @@ These methods use demonstrations, videos, language, or sensorimotor trajectories
 
 **Main limitation:** The policy must be trained to read the prompt modality, and reliable prompting does not guarantee the required low-level behavior is in the policy's learned repertoire.
 
-**Papers (20)**
+**Papers (21)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
@@ -160,6 +168,7 @@ These methods use demonstrations, videos, language, or sensorimotor trajectories
 | 2025-06-18 | [Robust Instant Policy: Leveraging Student's t-Regression Model for Robust In-context Imitation Learning of Robot Manipulation](https://arxiv.org/abs/2506.15157) | `IROS 2025` | [Project](https://sites.google.com/view/robustinstantpolicy) | In-Context Imitation, Trajectory Aggregation, Uncertainty, Real Robot |
 | 2025-12-08 | [See Once, Then Act: VLA Task Learning from One-Shot Video Demonstrations (ViVLA)](https://arxiv.org/abs/2512.07582) | `arXiv` | - | Human Video Prompt, Cross-Embodiment, Latent Action, VLA |
 | 2026-04-22 | [AdaTracker: Learning Adaptive In-Context Policy for Cross-Embodiment Active Visual Tracking](https://arxiv.org/abs/2604.20305) | `RA-L 2026` | - | Cross-Embodiment, Active Visual Tracking, In-Context Policy, Zero-Shot Adaptation |
+| 2026-04-22 | [Bimanual Robot Manipulation via Multi-Agent In-Context Learning](https://arxiv.org/abs/2604.20348) | `CoRL 2026` | [Project](https://alesspalma.github.io/bicicle) | Few-Shot Prompting, LLM, Bimanual Manipulation, Leader–Follower Control |
 | 2026-06-02 | [Instant-Fold: In-Context Imitation Learning for Deformable Object Manipulation](https://arxiv.org/abs/2606.04269) | `CoRL 2026` | - | Deformable Manipulation, Human Demonstration, Flow Matching, 3D Tokens |
 | 2026-06-06 | [SynthICL: Scalable In-context Imitation Learning with Synthetic Data](https://arxiv.org/abs/2606.08154) | `CoRL 2026` | [Project](https://synth-icl.github.io/) | Synthetic Data, RGB-Only, Flow Matching, One-Shot Imitation |
 | 2026-06-29 | [Behavior Prompting Policy: Demonstrations as Prompts for Manipulation](https://arxiv.org/abs/2606.30457) | `CoRL 2026` | [Project](https://behavior-prompting.github.io/) | Sensorimotor Prompt, Robot Demonstration, Behavior Prompting |
@@ -178,7 +187,7 @@ These methods allocate additional inference compute to reason, sample, search, p
 
 **Main limitation:** More computation helps only when reasoning, candidate diversity, predictive models, or selection scores contain useful signal; latency and hardware cost increase with the budget.
 
-**Papers (12)**
+**Papers (16)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
@@ -189,11 +198,15 @@ These methods allocate additional inference compute to reason, sample, search, p
 | 2025-09-26 | [VLA-Reasoner: Empowering Vision-Language-Action Models with Reasoning via Online Monte Carlo Tree Search](https://arxiv.org/abs/2509.22643) | `ICRA 2026` | [Project](https://vla-reasoner.github.io/) | VLA, MCTS, World Model, Value-Guided Search |
 | 2025-10-07 | [Verifier-free Test-Time Sampling for Vision-Language-Action Models](https://arxiv.org/abs/2510.05681) | `ICLR 2026` | [Project](https://suhyeok-jang.github.io/mg-select/) / [Code](https://github.com/suhyeok-jang/mg-select) | VLA, Verifier-Free Selection, Condition Masking, Best-of-N |
 | 2025-10-13 | [RoVer: Robot Reward Model as Test-Time Verifier for Vision-Language-Action Model](https://arxiv.org/abs/2510.10975) | `arXiv` | - | VLA, Process Reward Model, Candidate Refinement, Test-Time Verification |
+| 2025-10-18 | [Do What You Say: Steering Vision-Language-Action Models via Runtime Reasoning-Action Alignment Verification](https://arxiv.org/abs/2510.16281) | `ICRA 2026` | - | VLA, Action Verification, Embodied Chain-of-Thought, Best-of-N |
 | 2025-12-02 | [Steering Vision-Language-Action Models as Anti-Exploration: A Test-Time Scaling Approach](https://arxiv.org/abs/2512.02834) | `arXiv` | - | VLA, Flow Matching, Pseudo-Count Verifier, Best-of-N |
 | 2026-02-12 | [Scaling Verification Can Be More Effective than Scaling Policy Learning for Vision-Language-Action Alignment](https://arxiv.org/abs/2602.12281) | `arXiv` | - | Test-Time Scaling, Action Verification, VLA Alignment, Best-of-N |
 | 2026-04-21 | [FASTER: Value-Guided Sampling for Fast RL](https://arxiv.org/abs/2604.19730) | `arXiv` | [Project](https://pd-perry.github.io/faster/) / [Code](https://github.com/alexanderswerdlow/faster) | Diffusion Policy, Value-Guided Sampling, Early Candidate Filtering, Denoising MDP |
 | 2026-05-31 | [τ0-WM: A Unified Video-Action World Model for Robotic Manipulation](https://arxiv.org/abs/2606.01027) | `arXiv` | [Project](https://tau0-wm.github.io/) | World Model, Adaptive Test-Time Compute, Imagined Rollouts, Action Rectification |
+| 2026-06-30 | [ELASTIC: Efficiently Learning to Adaptively Scale Test-Time Compute for Generative Control Policies](https://arxiv.org/abs/2606.31132) | `CoRL 2026` | - | Adaptive Test-Time Compute, Generative Policy, Denoising, Action Sampling |
 | 2026-08-17 | [τ0-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation](https://arxiv.org/abs/2608.16885) | `arXiv` | [Project](https://tau0-vla.github.io/) | Hierarchical VLA, World Model, Test-Time Compute, Subtask Verification |
+| 2026-11-02 | [Seeing Through the Illusion: Test-Time Scaling for World Action Models](https://arxiv.org/abs/2611.03585) | `arXiv` | - | World-Action Model, Inverse Dynamics, Action Verification, Best-of-N |
+| 2026-11-10 | [Learning Low-Latency Action Verification for Frozen Vision-Language-Action Models](https://arxiv.org/abs/2611.14834) | `arXiv` | [Project](https://wen-hanshieh.github.io/hdh/) | VLA, Action Verification, History Conditioning, Best-of-N |
 
 <a id="6-policy-self-improvement"></a>
 ## 6. 🔄 Policy Self-Improvement
@@ -206,7 +219,7 @@ These methods use deployment rollouts, failures, corrections, or model-generated
 
 **Main limitation:** Requires reliable rewards or success labels, safe data collection, practical resets, and controls against policy drift or errors in model-generated data.
 
-**Papers (8)**
+**Papers (11)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
@@ -215,9 +228,12 @@ These methods use deployment rollouts, failures, corrections, or model-generated
 | 2025-09-09 | [RaC: Robot Learning for Long-Horizon Tasks by Scaling Recovery and Correction](https://arxiv.org/abs/2509.07953) | `arXiv` | [Project](https://rac-scaling-robot.github.io/) | Long-Horizon Manipulation, Human Intervention, Recovery Data, Iterative Imitation Learning |
 | 2025-10-30 | [Self-Improving Vision-Language-Action Models with Data Generation via Residual RL](https://arxiv.org/abs/2511.00091) | `ICLR 2026` | [Project](https://wenlixiao.com/self-improve-VLA-PLD) | VLA, Residual RL, Deployment-Aligned Data, Policy Distillation |
 | 2026-02-12 | [VLAW: Iterative Co-Improvement of Vision-Language-Action Policy and World Model](https://arxiv.org/abs/2602.12063) | `arXiv` | [Project](https://sites.google.com/view/vlaw-arxiv) | VLA, World Model, Synthetic Rollouts, Iterative Co-Improvement |
+| 2026-02-25 | [When to Act, Ask, or Learn: Uncertainty-Aware Policy Steering](https://arxiv.org/abs/2602.22474) | `RSS 2026` | - | Human Intervention, Residual Learning, Policy Steering, Conformal Prediction |
 | 2026-03-17 | [DreamPlan: Efficient Reinforcement Fine-Tuning of Vision-Language Planners via Video World Models](https://arxiv.org/abs/2603.16860) | `arXiv` | [Project](https://psi-lab.ai/DreamPlan/) | Vision-Language Planner, Video World Model, Synthetic Rollouts, Reinforcement Fine-Tuning |
 | 2026-05-06 | [When Life Gives You BC, Make Q-functions: Extracting Q-values from Behavior Cloning for On-Robot Reinforcement Learning](https://arxiv.org/abs/2605.05172) | `arXiv` | [Project](https://q2rl.rai-inst.com/) | Offline-to-Online RL, Q-Estimation, Q-Gating, On-Robot Learning |
+| 2026-06-18 | [ENPIRE: Agentic Robot Policy Self-Improvement in the Real World](https://arxiv.org/abs/2606.19980) | `CoRL 2026` | [Project](https://research.nvidia.com/labs/gear/enpire/) | Real-World Rollouts, Automatic Reset, Outcome Verification, Iterative Policy Improvement |
 | 2026-08-21 | [Beyond Imitation: Self-Improving Robot Policies via Off-Policy Q-Planning](https://arxiv.org/abs/2608.21204) | `CoRL 2026` | [Project](https://q-planning.github.io/) / [Code](https://github.com/varungiridhar/qplanning-code) | Frozen BC Policy, Off-Policy Q-Learning, Failure Rollouts, Value-Guided Planning |
+| 2026-11-06 | [On Agentic Manipulation Policies](https://arxiv.org/abs/2611.09892) | `arXiv` | [Project](https://apple-aiml-research.github.io/ml-amp/) | Persistent Memory, Rollout Feedback, Continual Learning, Bimanual Manipulation |
 <!-- GENERATED_PAPER_LISTS_END -->
 
 <a id="contributing"></a>

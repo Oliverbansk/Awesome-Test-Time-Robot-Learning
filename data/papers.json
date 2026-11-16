@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-09-30",
+  "last_updated": "2026-11-16",
   "lines": [
     {
       "id": "rl-post-training",
@@ -180,6 +180,19 @@
           ]
         },
         {
+          "date": "2026-07-07",
+          "title": "Optimal Transport Q-Learning for Flow Policy Steering and Acceleration",
+          "venue": "CoRL 2026",
+          "paper": "https://arxiv.org/abs/2607.06262",
+          "project": "https://ansocho.github.io/otql-flow/",
+          "tags": [
+            "Advantage Weighting",
+            "Flow Matching",
+            "Online RL",
+            "Optimal Transport"
+          ]
+        },
+        {
           "date": "2026-07-09",
           "title": "FlowDAgger: Human-in-the-Loop Adaptation of Generative Robot Policies in Latent Space",
           "venue": "arXiv",
@@ -189,6 +202,18 @@
             "DAgger",
             "Generative Policy",
             "Action Inversion"
+          ]
+        },
+        {
+          "date": "2026-10-19",
+          "title": "PIVOT: Policy Improvement via Trust-Region Optimization from Deployment Experience",
+          "venue": "CoRL 2026",
+          "paper": "https://openreview.net/forum?id=2vx7I6aRPS",
+          "tags": [
+            "Trust Region",
+            "Flow Matching",
+            "Deployment Rollouts",
+            "Bimanual Manipulation"
           ]
         }
       ]
@@ -286,6 +311,19 @@
           ]
         },
         {
+          "date": "2026-06-08",
+          "title": "Flow Control: Steering Vision-Language-Action Models with Simple Real-Time Inputs",
+          "venue": "CoRL 2026",
+          "paper": "https://arxiv.org/abs/2606.10180",
+          "project": "https://jcykao.github.io/flowcontrol/",
+          "tags": [
+            "VLA",
+            "Flow Matching",
+            "Human Input",
+            "Inference-Time Steering"
+          ]
+        },
+        {
           "date": "2026-06-09",
           "title": "Test-Time Gradient Guidance of Flow Policies in Reinforcement Learning",
           "venue": "arXiv",
@@ -299,6 +337,31 @@
           ]
         },
         {
+          "date": "2026-06-10",
+          "title": "Learning What to Say to Your VLA: Mostly Harmless Vision Language Action Model Steering",
+          "venue": "CoRL 2026",
+          "paper": "https://arxiv.org/abs/2606.12299",
+          "tags": [
+            "VLA",
+            "Language Feedback",
+            "Conformal Calibration",
+            "Frozen Policy"
+          ]
+        },
+        {
+          "date": "2026-06-11",
+          "title": "EmbodiSteer: Steering Embodiment-Agnostic Visuomotor Policies with Joint-Space Guidance for Zero-Shot Cross-Embodiment Deployment",
+          "venue": "CoRL 2026",
+          "paper": "https://arxiv.org/abs/2606.12965",
+          "project": "https://frankwang67.github.io/EmbodiSteer-Page",
+          "tags": [
+            "Cross-Embodiment",
+            "Diffusion Guidance",
+            "Joint-Space Guidance",
+            "Collision Avoidance"
+          ]
+        },
+        {
           "date": "2026-06-12",
           "title": "Improving Robotic Generalist Policies via Flow Reversal Steering",
           "venue": "arXiv",
@@ -308,6 +371,18 @@
             "Flow Inversion",
             "VLM Guidance",
             "Noise-Space Policy"
+          ]
+        },
+        {
+          "date": "2026-06-12",
+          "title": "Inference-time Policy Steering via Vision and Touch",
+          "venue": "CoRL 2026",
+          "paper": "https://arxiv.org/abs/2606.14981",
+          "tags": [
+            "Visuotactile Steering",
+            "World Model",
+            "Diffusion Editing",
+            "Contact-Rich Manipulation"
           ]
         },
         {
@@ -357,6 +432,18 @@
             "World Model",
             "Latent-Space Search",
             "Frozen Policy"
+          ]
+        },
+        {
+          "date": "2026-11-07",
+          "title": "GUARD: Anomaly-Informed Q-Steering for Generative Robot Policies in Dexterous Manipulation",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2611.10343",
+          "tags": [
+            "Q-Guidance",
+            "Anomaly Detection",
+            "Generative Policy",
+            "Dexterous Manipulation"
           ]
         }
       ]
@@ -501,6 +588,18 @@
             "Fast Weights",
             "VLA",
             "Human Video"
+          ]
+        },
+        {
+          "date": "2026-09-28",
+          "title": "Scouting the Dynamics Gap: Test-Time Policy Adaptation via Action-Outcome Feedback",
+          "venue": "CoRL 2026",
+          "paper": "https://arxiv.org/abs/2609.36107",
+          "tags": [
+            "Dynamics Adaptation",
+            "Meta-Learning",
+            "Latent Belief",
+            "Action-Outcome Feedback"
           ]
         }
       ]
@@ -688,6 +787,19 @@
           ]
         },
         {
+          "date": "2026-04-22",
+          "title": "Bimanual Robot Manipulation via Multi-Agent In-Context Learning",
+          "venue": "CoRL 2026",
+          "paper": "https://arxiv.org/abs/2604.20348",
+          "project": "https://alesspalma.github.io/bicicle",
+          "tags": [
+            "Few-Shot Prompting",
+            "LLM",
+            "Bimanual Manipulation",
+            "Leader–Follower Control"
+          ]
+        },
+        {
           "date": "2026-06-02",
           "title": "Instant-Fold: In-Context Imitation Learning for Deformable Object Manipulation",
           "venue": "CoRL 2026",
@@ -862,6 +974,18 @@
           ]
         },
         {
+          "date": "2025-10-18",
+          "title": "Do What You Say: Steering Vision-Language-Action Models via Runtime Reasoning-Action Alignment Verification",
+          "venue": "ICRA 2026",
+          "paper": "https://arxiv.org/abs/2510.16281",
+          "tags": [
+            "VLA",
+            "Action Verification",
+            "Embodied Chain-of-Thought",
+            "Best-of-N"
+          ]
+        },
+        {
           "date": "2025-12-02",
           "title": "Steering Vision-Language-Action Models as Anti-Exploration: A Test-Time Scaling Approach",
           "venue": "arXiv",
@@ -913,6 +1037,18 @@
           ]
         },
         {
+          "date": "2026-06-30",
+          "title": "ELASTIC: Efficiently Learning to Adaptively Scale Test-Time Compute for Generative Control Policies",
+          "venue": "CoRL 2026",
+          "paper": "https://arxiv.org/abs/2606.31132",
+          "tags": [
+            "Adaptive Test-Time Compute",
+            "Generative Policy",
+            "Denoising",
+            "Action Sampling"
+          ]
+        },
+        {
           "date": "2026-08-17",
           "title": "τ0-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation",
           "venue": "arXiv",
@@ -923,6 +1059,31 @@
             "World Model",
             "Test-Time Compute",
             "Subtask Verification"
+          ]
+        },
+        {
+          "date": "2026-11-02",
+          "title": "Seeing Through the Illusion: Test-Time Scaling for World Action Models",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2611.03585",
+          "tags": [
+            "World-Action Model",
+            "Inverse Dynamics",
+            "Action Verification",
+            "Best-of-N"
+          ]
+        },
+        {
+          "date": "2026-11-10",
+          "title": "Learning Low-Latency Action Verification for Frozen Vision-Language-Action Models",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2611.14834",
+          "project": "https://wen-hanshieh.github.io/hdh/",
+          "tags": [
+            "VLA",
+            "Action Verification",
+            "History Conditioning",
+            "Best-of-N"
           ]
         }
       ]
@@ -1000,6 +1161,18 @@
           ]
         },
         {
+          "date": "2026-02-25",
+          "title": "When to Act, Ask, or Learn: Uncertainty-Aware Policy Steering",
+          "venue": "RSS 2026",
+          "paper": "https://arxiv.org/abs/2602.22474",
+          "tags": [
+            "Human Intervention",
+            "Residual Learning",
+            "Policy Steering",
+            "Conformal Prediction"
+          ]
+        },
+        {
           "date": "2026-03-17",
           "title": "DreamPlan: Efficient Reinforcement Fine-Tuning of Vision-Language Planners via Video World Models",
           "venue": "arXiv",
@@ -1026,6 +1199,19 @@
           ]
         },
         {
+          "date": "2026-06-18",
+          "title": "ENPIRE: Agentic Robot Policy Self-Improvement in the Real World",
+          "venue": "CoRL 2026",
+          "paper": "https://arxiv.org/abs/2606.19980",
+          "project": "https://research.nvidia.com/labs/gear/enpire/",
+          "tags": [
+            "Real-World Rollouts",
+            "Automatic Reset",
+            "Outcome Verification",
+            "Iterative Policy Improvement"
+          ]
+        },
+        {
           "date": "2026-08-21",
           "title": "Beyond Imitation: Self-Improving Robot Policies via Off-Policy Q-Planning",
           "venue": "CoRL 2026",
@@ -1037,6 +1223,19 @@
             "Off-Policy Q-Learning",
             "Failure Rollouts",
             "Value-Guided Planning"
+          ]
+        },
+        {
+          "date": "2026-11-06",
+          "title": "On Agentic Manipulation Policies",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2611.09892",
+          "project": "https://apple-aiml-research.github.io/ml-amp/",
+          "tags": [
+            "Persistent Memory",
+            "Rollout Feedback",
+            "Continual Learning",
+            "Bimanual Manipulation"
           ]
         }
       ]
