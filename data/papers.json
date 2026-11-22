@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-11-16",
+  "last_updated": "2026-11-22",
   "lines": [
     {
       "id": "rl-post-training",
@@ -202,6 +202,19 @@
             "DAgger",
             "Generative Policy",
             "Action Inversion"
+          ]
+        },
+        {
+          "date": "2026-10-10",
+          "title": "CFG-Policy: Unified Diffusion Policy Learning Framework via Classifier-free Guidance",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2610.14936",
+          "project": "https://zhy-liu.github.io/cfg-policy-page",
+          "tags": [
+            "Exploration",
+            "Classifier-Free Guidance",
+            "Generative Policy",
+            "Offline-to-Online RL"
           ]
         },
         {
@@ -763,6 +776,18 @@
           ]
         },
         {
+          "date": "2025-07-11",
+          "title": "Behavioral Exploration: Learning to Explore via In-Context Adaptation",
+          "venue": "ICML 2025",
+          "paper": "https://arxiv.org/abs/2507.09041",
+          "tags": [
+            "Exploration",
+            "In-Context Adaptation",
+            "Interaction History",
+            "Real Robot"
+          ]
+        },
+        {
           "date": "2025-12-08",
           "title": "See Once, Then Act: VLA Task Learning from One-Shot Video Demonstrations (ViVLA)",
           "venue": "arXiv",
@@ -1196,6 +1221,18 @@
             "Q-Estimation",
             "Q-Gating",
             "On-Robot Learning"
+          ]
+        },
+        {
+          "date": "2026-06-07",
+          "title": "Guided Discovery of New Behaviors using Diffusion Policies",
+          "venue": "CoRL 2026",
+          "paper": "https://arxiv.org/abs/2606.08743",
+          "tags": [
+            "Exploration",
+            "Rare Behavior Discovery",
+            "Trajectory Optimization",
+            "Iterative Policy Improvement"
           ]
         },
         {

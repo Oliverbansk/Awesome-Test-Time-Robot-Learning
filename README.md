@@ -55,7 +55,7 @@ These methods use reinforcement learning after task-level post-training to impro
 
 **Main limitation:** Interaction cost, resets, safety, reward design, and stability of online optimization.
 
-**Papers (17)**
+**Papers (18)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
@@ -75,6 +75,7 @@ These methods use reinforcement learning after task-level post-training to impro
 | 2026-06-30 | [Adapting Generalist Robot Policies with Semantic Reinforcement Learning](https://arxiv.org/abs/2606.31958) | `arXiv` | - | VLA, Semantic Actions, Real-World RL, Online Adaptation |
 | 2026-07-07 | [Optimal Transport Q-Learning for Flow Policy Steering and Acceleration](https://arxiv.org/abs/2607.06262) | `CoRL 2026` | [Project](https://ansocho.github.io/otql-flow/) | Advantage Weighting, Flow Matching, Online RL, Optimal Transport |
 | 2026-07-09 | [FlowDAgger: Human-in-the-Loop Adaptation of Generative Robot Policies in Latent Space](https://arxiv.org/abs/2607.08877) | `arXiv` | - | Human-in-the-Loop, DAgger, Generative Policy, Action Inversion |
+| 2026-10-10 | [CFG-Policy: Unified Diffusion Policy Learning Framework via Classifier-free Guidance](https://arxiv.org/abs/2610.14936) | `arXiv` | [Project](https://zhy-liu.github.io/cfg-policy-page) | Exploration, Classifier-Free Guidance, Generative Policy, Offline-to-Online RL |
 | 2026-10-19 | [PIVOT: Policy Improvement via Trust-Region Optimization from Deployment Experience](https://openreview.net/forum?id=2vx7I6aRPS) | `CoRL 2026` | - | Trust Region, Flow Matching, Deployment Rollouts, Bimanual Manipulation |
 
 <a id="2-test-time-policy-steering"></a>
@@ -150,7 +151,7 @@ These methods use demonstrations, videos, language, or sensorimotor trajectories
 
 **Main limitation:** The policy must be trained to read the prompt modality, and reliable prompting does not guarantee the required low-level behavior is in the policy's learned repertoire.
 
-**Papers (21)**
+**Papers (22)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
@@ -166,6 +167,7 @@ These methods use demonstrations, videos, language, or sensorimotor trajectories
 | 2025-05-27 | [Hierarchical Instruction-aware Embodied Visual Tracking](https://arxiv.org/abs/2505.20710) | `FCS 2026` | [Project](https://sites.google.com/view/hievt) | Language-Conditioned Policy, LLM Spatial Reasoning, RAG Goal Correction, Embodied Visual Tracking |
 | 2025-05-28 | [Behavior-agnostic Task Inference for Robust Offline In-context Reinforcement Learning](https://openreview.net/pdf?id=jMKaATBEKb) | `ICML 2025` | [Project](https://sites.google.com/view/bati-icrl) | Offline In-Context RL, Task Inference, Context Trajectories, Distribution Shift |
 | 2025-06-18 | [Robust Instant Policy: Leveraging Student's t-Regression Model for Robust In-context Imitation Learning of Robot Manipulation](https://arxiv.org/abs/2506.15157) | `IROS 2025` | [Project](https://sites.google.com/view/robustinstantpolicy) | In-Context Imitation, Trajectory Aggregation, Uncertainty, Real Robot |
+| 2025-07-11 | [Behavioral Exploration: Learning to Explore via In-Context Adaptation](https://arxiv.org/abs/2507.09041) | `ICML 2025` | - | Exploration, In-Context Adaptation, Interaction History, Real Robot |
 | 2025-12-08 | [See Once, Then Act: VLA Task Learning from One-Shot Video Demonstrations (ViVLA)](https://arxiv.org/abs/2512.07582) | `arXiv` | - | Human Video Prompt, Cross-Embodiment, Latent Action, VLA |
 | 2026-04-22 | [AdaTracker: Learning Adaptive In-Context Policy for Cross-Embodiment Active Visual Tracking](https://arxiv.org/abs/2604.20305) | `RA-L 2026` | - | Cross-Embodiment, Active Visual Tracking, In-Context Policy, Zero-Shot Adaptation |
 | 2026-04-22 | [Bimanual Robot Manipulation via Multi-Agent In-Context Learning](https://arxiv.org/abs/2604.20348) | `CoRL 2026` | [Project](https://alesspalma.github.io/bicicle) | Few-Shot Prompting, LLM, Bimanual Manipulation, Leader–Follower Control |
@@ -219,7 +221,7 @@ These methods use deployment rollouts, failures, corrections, or model-generated
 
 **Main limitation:** Requires reliable rewards or success labels, safe data collection, practical resets, and controls against policy drift or errors in model-generated data.
 
-**Papers (11)**
+**Papers (12)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
@@ -231,6 +233,7 @@ These methods use deployment rollouts, failures, corrections, or model-generated
 | 2026-02-25 | [When to Act, Ask, or Learn: Uncertainty-Aware Policy Steering](https://arxiv.org/abs/2602.22474) | `RSS 2026` | - | Human Intervention, Residual Learning, Policy Steering, Conformal Prediction |
 | 2026-03-17 | [DreamPlan: Efficient Reinforcement Fine-Tuning of Vision-Language Planners via Video World Models](https://arxiv.org/abs/2603.16860) | `arXiv` | [Project](https://psi-lab.ai/DreamPlan/) | Vision-Language Planner, Video World Model, Synthetic Rollouts, Reinforcement Fine-Tuning |
 | 2026-05-06 | [When Life Gives You BC, Make Q-functions: Extracting Q-values from Behavior Cloning for On-Robot Reinforcement Learning](https://arxiv.org/abs/2605.05172) | `arXiv` | [Project](https://q2rl.rai-inst.com/) | Offline-to-Online RL, Q-Estimation, Q-Gating, On-Robot Learning |
+| 2026-06-07 | [Guided Discovery of New Behaviors using Diffusion Policies](https://arxiv.org/abs/2606.08743) | `CoRL 2026` | - | Exploration, Rare Behavior Discovery, Trajectory Optimization, Iterative Policy Improvement |
 | 2026-06-18 | [ENPIRE: Agentic Robot Policy Self-Improvement in the Real World](https://arxiv.org/abs/2606.19980) | `CoRL 2026` | [Project](https://research.nvidia.com/labs/gear/enpire/) | Real-World Rollouts, Automatic Reset, Outcome Verification, Iterative Policy Improvement |
 | 2026-08-21 | [Beyond Imitation: Self-Improving Robot Policies via Off-Policy Q-Planning](https://arxiv.org/abs/2608.21204) | `CoRL 2026` | [Project](https://q-planning.github.io/) / [Code](https://github.com/varungiridhar/qplanning-code) | Frozen BC Policy, Off-Policy Q-Learning, Failure Rollouts, Value-Guided Planning |
 | 2026-11-06 | [On Agentic Manipulation Policies](https://arxiv.org/abs/2611.09892) | `arXiv` | [Project](https://apple-aiml-research.github.io/ml-amp/) | Persistent Memory, Rollout Feedback, Continual Learning, Bimanual Manipulation |
