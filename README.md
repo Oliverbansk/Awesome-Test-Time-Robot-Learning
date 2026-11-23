@@ -55,26 +55,30 @@ These methods use reinforcement learning after task-level post-training to impro
 
 **Main limitation:** Interaction cost, resets, safety, reward design, and stability of online optimization.
 
-**Papers (18)**
+**Papers (22)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
 | 2024-07-23 | [From Imitation to Refinement: Residual RL for Precise Assembly](https://arxiv.org/abs/2407.16677) | `ICRA 2025` | [Project](https://residual-assembly.github.io/) | Residual RL, Assembly, PPO, Sim-to-Real |
 | 2024-09-01 | [Diffusion Policy Policy Optimization (DPPO)](https://arxiv.org/abs/2409.00588) | `ICLR 2025` | - | Diffusion Policy, On-Policy RL, PPO |
 | 2024-12-18 | [Policy Decorator: Model-Agnostic Online Refinement for Large Policy Model](https://arxiv.org/abs/2412.13630) | `ICLR 2025` | [Project](https://policydecorator.github.io/) | Residual RL, Online Adaptation, SAC, Model-Agnostic |
-| 2025-05-24 | [VLA-RL: Towards Masterful and General Robotic Manipulation with Scalable Reinforcement Learning](https://arxiv.org/abs/2505.18719) | `arXiv` | - | VLA, Online RL, PPO, Process Reward |
+| 2025-05-24 | [VLA-RL: Towards Masterful and General Robotic Manipulation with Scalable Reinforcement Learning](https://arxiv.org/abs/2505.18719) | `IROS 2026` | - | VLA, Online RL, PPO, Process Reward |
 | 2025-06-18 | [Steering Your Diffusion Policy with Latent Space Reinforcement Learning](https://arxiv.org/abs/2506.15799) | `CoRL 2025` | [Project](https://diffusion-steering.github.io/) | Diffusion Policy, Latent-Space RL, Black-Box Policy, Real-World RL |
 | 2025-08-20 | [HIL-SERL: Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning](https://doi.org/10.1126/scirobotics.ads5033) | `Science Robotics` | - | Human-in-the-Loop RL, Real-World RL, Human Intervention |
 | 2025-09-18 | [Unified Latent Steering and Residual Refinement for Online Improvement of Diffusion Policy Models](https://openreview.net/forum?id=9sQVoVMeSD) | `ICML 2026 Workshop / CoRL 2026 Submission` | - | Diffusion Policy, Latent Steering, Residual RL, Online RL |
 | 2025-09-23 | [Residual Off-Policy RL for Finetuning Behavior Cloning Policies](https://arxiv.org/abs/2509.19301) | `ICLR 2026 Workshop` | - | Residual RL, Off-Policy RL, Behavior Cloning |
 | 2025-10-16 | [RL-100: Performant Robotic Manipulation with Real-World Reinforcement Learning](https://arxiv.org/abs/2510.14830) | `Science Robotics` | [Project](https://lei-kun.github.io/RL-100/) | Real-World RL, Offline-to-Online RL, Diffusion Policy |
 | 2026-01-11 | [On-the-Fly VLA Adaptation via Test-Time Reinforcement Learning](https://arxiv.org/abs/2601.06748) | `arXiv` | - | VLA, Test-Time RL, LoRA, Online Adaptation |
+| 2026-01-27 | [E2HiL: Entropy-Guided Sample Selection for Efficient Real-World Human-in-the-Loop Reinforcement Learning](https://arxiv.org/abs/2601.19969) | `RA-L 2026` | [Project](https://e2hil.github.io/) | Real-World RL, Human-in-the-Loop RL, Entropy-Guided Sample Selection, Exploration |
 | 2026-02-13 | [Beyond Imitation: Reinforcement Learning-Based Sim-Real Co-Training for VLA Models](https://arxiv.org/abs/2602.12628) | `ICRA 2026 Workshop` | - | VLA, Sim-to-Real, Co-Training, RL Fine-Tuning |
 | 2026-05-12 | [TMRL: Diffusion Timestep-Modulated Pretraining Enables Exploration for Efficient Policy Finetuning](https://arxiv.org/abs/2605.12236) | `RSS 2026` | - | Diffusion Policy, Exploration, RL Fine-Tuning, Action Coverage |
 | 2026-05-19 | [Beyond Action Residuals: Real-World Robot Policy Steering via Bottleneck Latent Reinforcement Learning](https://arxiv.org/abs/2605.19919) | `arXiv` | [Project](https://manutdmoon.github.io/ZPRL/) | Latent-Space RL, Flow Matching, Real-World RL, Policy Adaptation |
+| 2026-06-10 | [UniIntervene: Agentic Intervention for Efficient Real-World Reinforcement Learning](https://arxiv.org/abs/2606.12372) | `CoRL 2026` | [Project](https://denghaoyuan123.github.io/UniIntervene-project/) / [Code](https://github.com/Denghaoyuan123/UniIntervene) | Real-World RL, Agentic Intervention, Value-Aware Recovery, Recovery Memory |
 | 2026-06-30 | [Adapting Generalist Robot Policies with Semantic Reinforcement Learning](https://arxiv.org/abs/2606.31958) | `arXiv` | - | VLA, Semantic Actions, Real-World RL, Online Adaptation |
 | 2026-07-07 | [Optimal Transport Q-Learning for Flow Policy Steering and Acceleration](https://arxiv.org/abs/2607.06262) | `CoRL 2026` | [Project](https://ansocho.github.io/otql-flow/) | Advantage Weighting, Flow Matching, Online RL, Optimal Transport |
 | 2026-07-09 | [FlowDAgger: Human-in-the-Loop Adaptation of Generative Robot Policies in Latent Space](https://arxiv.org/abs/2607.08877) | `arXiv` | - | Human-in-the-Loop, DAgger, Generative Policy, Action Inversion |
+| 2026-09-01 | [Facet-0: A Robotic Foundation Model for Contact-Rich Precise Manipulation](https://arxiv.org/abs/2609.01596) | `arXiv` | - | Real-World RL, Force Feedback, Bounded Actor, Contact-Rich Manipulation |
+| 2026-10-02 | [UniIntervene++: An Adaptive Intervention Agent for Efficient Real-World Reinforcement Learning](https://arxiv.org/abs/2610.03620) | `arXiv` | [Code](https://github.com/dannyyudong/An-Adaptive-Intervention-Agent-for-Efficient-Real-World-Reinforcement-Learning) | Real-World RL, Adaptive Intervention, Options, Recovery Policy |
 | 2026-10-10 | [CFG-Policy: Unified Diffusion Policy Learning Framework via Classifier-free Guidance](https://arxiv.org/abs/2610.14936) | `arXiv` | [Project](https://zhy-liu.github.io/cfg-policy-page) | Exploration, Classifier-Free Guidance, Generative Policy, Offline-to-Online RL |
 | 2026-10-19 | [PIVOT: Policy Improvement via Trust-Region Optimization from Deployment Experience](https://openreview.net/forum?id=2vx7I6aRPS) | `CoRL 2026` | - | Trust Region, Flow Matching, Deployment Rollouts, Bimanual Manipulation |
 
@@ -89,13 +93,15 @@ These methods keep the base policy frozen and intervene in its action-generation
 
 **Main limitation:** It usually cannot repair missing support; guidance quality, repeated sampling, and external models can also add substantial latency.
 
-**Papers (18)**
+**Papers (20)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
 | 2024-10-18 | [Steering Your Generalists: Improving Robotic Foundation Models via Value Guidance](https://arxiv.org/abs/2410.13816) | `CoRL 2024` | - | Value Guidance, Action Re-Ranking, Offline RL, Black-Box Steering |
+| 2025-03-17 | [MoManipVLA: Transferring Vision-language-action Models for General Mobile Manipulation](https://arxiv.org/abs/2503.13446) | `CVPR 2025` | [Project](https://gary3410.github.io/momanipVLA/) | VLA, Mobile Manipulation, Bi-Level Trajectory Optimization, Physical Feasibility |
 | 2025-06-16 | [DynaGuide: Steering Diffusion Policies with Active Dynamic Guidance](https://arxiv.org/abs/2506.13922) | `NeurIPS 2025` | - | Diffusion Guidance, Latent Dynamics, Model-Based Control |
 | 2025-08-08 | [Latent Policy Barrier: Learning Robust Visuomotor Policies by Staying In-Distribution](https://arxiv.org/abs/2508.05941) | `NeurIPS 2025` | - | Diffusion Policy, Latent Dynamics, OOD Detection, Recovery |
+| 2025-08-25 | [SafeBimanual: Diffusion-based Trajectory Optimization for Safe Bimanual Manipulation](https://arxiv.org/abs/2508.18268) | `CoRL 2025` | [Project](https://denghaoyuan123.github.io/SafeBimanip/) | Diffusion Guidance, Safety Constraints, Bimanual Manipulation, VLM |
 | 2025-11-18 | [Towards Deploying VLA without Fine-Tuning: Plug-and-Play Inference-Time VLA Policy Steering via Embodied Evolutionary Diffusion](https://arxiv.org/abs/2511.14178) | `RA-L 2026` | [Project](https://rip4kobe.github.io/vla-pilot/) | VLA, Evolutionary Diffusion, VLM Reward, Training-Free |
 | 2026-02-03 | [VLS: Steering Pretrained Robot Policies via Vision-Language Models](https://arxiv.org/abs/2602.03973) | `arXiv` | - | VLM, Reward-Guided Denoising, Diffusion Policy, Flow Matching |
 | 2026-03-09 | [OmniGuide: Universal Guidance Fields for Enhancing Generalist Robot Policies](https://arxiv.org/abs/2603.10052) | `arXiv` | - | Guidance Field, VLA, Human Demonstrations, Flow Matching |
@@ -151,7 +157,7 @@ These methods use demonstrations, videos, language, or sensorimotor trajectories
 
 **Main limitation:** The policy must be trained to read the prompt modality, and reliable prompting does not guarantee the required low-level behavior is in the policy's learned repertoire.
 
-**Papers (22)**
+**Papers (23)**
 
 | Date | Paper | Venue | Resources | Tags |
 | --- | --- | --- | --- | --- |
@@ -168,6 +174,7 @@ These methods use demonstrations, videos, language, or sensorimotor trajectories
 | 2025-05-28 | [Behavior-agnostic Task Inference for Robust Offline In-context Reinforcement Learning](https://openreview.net/pdf?id=jMKaATBEKb) | `ICML 2025` | [Project](https://sites.google.com/view/bati-icrl) | Offline In-Context RL, Task Inference, Context Trajectories, Distribution Shift |
 | 2025-06-18 | [Robust Instant Policy: Leveraging Student's t-Regression Model for Robust In-context Imitation Learning of Robot Manipulation](https://arxiv.org/abs/2506.15157) | `IROS 2025` | [Project](https://sites.google.com/view/robustinstantpolicy) | In-Context Imitation, Trajectory Aggregation, Uncertainty, Real Robot |
 | 2025-07-11 | [Behavioral Exploration: Learning to Explore via In-Context Adaptation](https://arxiv.org/abs/2507.09041) | `ICML 2025` | - | Exploration, In-Context Adaptation, Interaction History, Real Robot |
+| 2025-11-12 | [MAP-VLA: Memory-Augmented Prompting for Vision-Language-Action Model in Robotic Manipulation](https://arxiv.org/abs/2511.09516) | `ICRA 2026` | - | VLA, Memory Retrieval, Soft Prompts, Frozen Policy |
 | 2025-12-08 | [See Once, Then Act: VLA Task Learning from One-Shot Video Demonstrations (ViVLA)](https://arxiv.org/abs/2512.07582) | `arXiv` | - | Human Video Prompt, Cross-Embodiment, Latent Action, VLA |
 | 2026-04-22 | [AdaTracker: Learning Adaptive In-Context Policy for Cross-Embodiment Active Visual Tracking](https://arxiv.org/abs/2604.20305) | `RA-L 2026` | - | Cross-Embodiment, Active Visual Tracking, In-Context Policy, Zero-Shot Adaptation |
 | 2026-04-22 | [Bimanual Robot Manipulation via Multi-Agent In-Context Learning](https://arxiv.org/abs/2604.20348) | `CoRL 2026` | [Project](https://alesspalma.github.io/bicicle) | Few-Shot Prompting, LLM, Bimanual Manipulation, Leader–Follower Control |

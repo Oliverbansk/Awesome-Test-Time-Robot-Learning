@@ -50,7 +50,7 @@
         {
           "date": "2025-05-24",
           "title": "VLA-RL: Towards Masterful and General Robotic Manipulation with Scalable Reinforcement Learning",
-          "venue": "arXiv",
+          "venue": "IROS 2026",
           "paper": "https://arxiv.org/abs/2505.18719",
           "tags": [
             "VLA",
@@ -131,6 +131,19 @@
           ]
         },
         {
+          "date": "2026-01-27",
+          "title": "E2HiL: Entropy-Guided Sample Selection for Efficient Real-World Human-in-the-Loop Reinforcement Learning",
+          "venue": "RA-L 2026",
+          "paper": "https://arxiv.org/abs/2601.19969",
+          "project": "https://e2hil.github.io/",
+          "tags": [
+            "Real-World RL",
+            "Human-in-the-Loop RL",
+            "Entropy-Guided Sample Selection",
+            "Exploration"
+          ]
+        },
+        {
           "date": "2026-02-13",
           "title": "Beyond Imitation: Reinforcement Learning-Based Sim-Real Co-Training for VLA Models",
           "venue": "ICRA 2026 Workshop",
@@ -168,6 +181,20 @@
           ]
         },
         {
+          "date": "2026-06-10",
+          "title": "UniIntervene: Agentic Intervention for Efficient Real-World Reinforcement Learning",
+          "venue": "CoRL 2026",
+          "paper": "https://arxiv.org/abs/2606.12372",
+          "project": "https://denghaoyuan123.github.io/UniIntervene-project/",
+          "code": "https://github.com/Denghaoyuan123/UniIntervene",
+          "tags": [
+            "Real-World RL",
+            "Agentic Intervention",
+            "Value-Aware Recovery",
+            "Recovery Memory"
+          ]
+        },
+        {
           "date": "2026-06-30",
           "title": "Adapting Generalist Robot Policies with Semantic Reinforcement Learning",
           "venue": "arXiv",
@@ -202,6 +229,31 @@
             "DAgger",
             "Generative Policy",
             "Action Inversion"
+          ]
+        },
+        {
+          "date": "2026-09-01",
+          "title": "Facet-0: A Robotic Foundation Model for Contact-Rich Precise Manipulation",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2609.01596",
+          "tags": [
+            "Real-World RL",
+            "Force Feedback",
+            "Bounded Actor",
+            "Contact-Rich Manipulation"
+          ]
+        },
+        {
+          "date": "2026-10-02",
+          "title": "UniIntervene++: An Adaptive Intervention Agent for Efficient Real-World Reinforcement Learning",
+          "venue": "arXiv",
+          "paper": "https://arxiv.org/abs/2610.03620",
+          "code": "https://github.com/dannyyudong/An-Adaptive-Intervention-Agent-for-Efficient-Real-World-Reinforcement-Learning",
+          "tags": [
+            "Real-World RL",
+            "Adaptive Intervention",
+            "Options",
+            "Recovery Policy"
           ]
         },
         {
@@ -252,6 +304,19 @@
           ]
         },
         {
+          "date": "2025-03-17",
+          "title": "MoManipVLA: Transferring Vision-language-action Models for General Mobile Manipulation",
+          "venue": "CVPR 2025",
+          "paper": "https://arxiv.org/abs/2503.13446",
+          "tags": [
+            "VLA",
+            "Mobile Manipulation",
+            "Bi-Level Trajectory Optimization",
+            "Physical Feasibility"
+          ],
+          "project": "https://gary3410.github.io/momanipVLA/"
+        },
+        {
           "date": "2025-06-16",
           "title": "DynaGuide: Steering Diffusion Policies with Active Dynamic Guidance",
           "venue": "NeurIPS 2025",
@@ -273,6 +338,19 @@
             "OOD Detection",
             "Recovery"
           ]
+        },
+        {
+          "date": "2025-08-25",
+          "title": "SafeBimanual: Diffusion-based Trajectory Optimization for Safe Bimanual Manipulation",
+          "venue": "CoRL 2025",
+          "paper": "https://arxiv.org/abs/2508.18268",
+          "tags": [
+            "Diffusion Guidance",
+            "Safety Constraints",
+            "Bimanual Manipulation",
+            "VLM"
+          ],
+          "project": "https://denghaoyuan123.github.io/SafeBimanip/"
         },
         {
           "date": "2025-11-18",
@@ -785,6 +863,18 @@
             "In-Context Adaptation",
             "Interaction History",
             "Real Robot"
+          ]
+        },
+        {
+          "date": "2025-11-12",
+          "title": "MAP-VLA: Memory-Augmented Prompting for Vision-Language-Action Model in Robotic Manipulation",
+          "venue": "ICRA 2026",
+          "paper": "https://arxiv.org/abs/2511.09516",
+          "tags": [
+            "VLA",
+            "Memory Retrieval",
+            "Soft Prompts",
+            "Frozen Policy"
           ]
         },
         {
